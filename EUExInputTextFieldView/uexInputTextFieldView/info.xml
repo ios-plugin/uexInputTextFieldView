@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+    <plugin uexName="uexInputTextFieldView" version="3.0.3" build="3">
+        <info>3:open接口参数改为json类型，添加placehold参数，可以设置输入框里默认显示的文字</info>
+        <build>2:动画优化</build>
+        <build>1:onCommit接口的参数使用json格式</build>
+        <build>0:EUExInputTextFieldView插件</build>
+    </plugin>
+</uexplugins>

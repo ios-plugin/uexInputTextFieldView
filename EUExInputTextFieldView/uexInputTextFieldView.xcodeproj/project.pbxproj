@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C4BACC61AAE867C00B34133 /* EUExInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC901AAE867C00B34133 /* EUExInputTextFieldView.m */; };
+		3C4BACC71AAE867C00B34133 /* NSAttributedString+InputAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC941AAE867C00B34133 /* NSAttributedString+InputAttributes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3C4BACC81AAE867C00B34133 /* NSString+InputMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC961AAE867C00B34133 /* NSString+InputMessage.m */; };
+		3C4BACC91AAE867C00B34133 /* UIImage+InputXHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC981AAE867C00B34133 /* UIImage+InputXHRounded.m */; };
+		3C4BACCA1AAE867C00B34133 /* InputZBMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC9B1AAE867C00B34133 /* InputZBMessageAvatorFactory.m */; };
+		3C4BACCB1AAE867C00B34133 /* InputZBMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC9D1AAE867C00B34133 /* InputZBMessageBubbleFactory.m */; };
+		3C4BACCC1AAE867C00B34133 /* InputZBMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BAC9F1AAE867C00B34133 /* InputZBMessageVoiceFactory.m */; };
+		3C4BACCD1AAE867C00B34133 /* InputChatKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACA11AAE867C00B34133 /* InputChatKeyboard.m */; };
+		3C4BACCE1AAE867C00B34133 /* InputChatKeyboardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACA31AAE867C00B34133 /* InputChatKeyboardData.m */; };
+		3C4BACCF1AAE867C00B34133 /* InputChatKeyboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACA51AAE867C00B34133 /* InputChatKeyboardUtility.m */; };
+		3C4BACD01AAE867C00B34133 /* InputZBExpressionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACB01AAE867C00B34133 /* InputZBExpressionSectionBar.m */; };
+		3C4BACD11AAE867C00B34133 /* InputZBFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACB21AAE867C00B34133 /* InputZBFaceView.m */; };
+		3C4BACD21AAE867C00B34133 /* InputZBMessageManagerFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACB41AAE867C00B34133 /* InputZBMessageManagerFaceView.m */; };
+		3C4BACD31AAE867C00B34133 /* InputZBMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACB71AAE867C00B34133 /* InputZBMessageInputView.m */; };
+		3C4BACD41AAE867C00B34133 /* InputZBMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACB91AAE867C00B34133 /* InputZBMessageTextView.m */; };
+		3C4BACD51AAE867C00B34133 /* InputZBMessageShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACBC1AAE867C00B34133 /* InputZBMessageShareMenuItem.m */; };
+		3C4BACD61AAE867C00B34133 /* InputZBMessageShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACBE1AAE867C00B34133 /* InputZBMessageShareMenuView.m */; };
+		3C4BACD71AAE867C00B34133 /* InputZBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACC11AAE867C00B34133 /* InputZBMessage.m */; };
+		3C4BACD81AAE867C00B34133 /* InputXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BACC41AAE867C00B34133 /* InputXMLReader.m */; };
+		3C6CD9861AAE8D0F00D38A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD97B1AAE8D0F00D38A65 /* UIKit.framework */; };
+		3C6CD9871AAE8D0F00D38A65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD97C1AAE8D0F00D38A65 /* CoreGraphics.framework */; };
+		3C6CD9881AAE8D0F00D38A65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD97D1AAE8D0F00D38A65 /* QuartzCore.framework */; };
+		3C6CD9891AAE8D0F00D38A65 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD97E1AAE8D0F00D38A65 /* libz.dylib */; };
+		3C6CD98A1AAE8D0F00D38A65 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD97F1AAE8D0F00D38A65 /* libsqlite3.dylib */; };
+		3C6CD98B1AAE8D0F00D38A65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD9801AAE8D0F00D38A65 /* SystemConfiguration.framework */; };
+		3C6CD98C1AAE8D0F00D38A65 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD9811AAE8D0F00D38A65 /* MobileCoreServices.framework */; };
+		3C6CD98D1AAE8D0F00D38A65 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD9821AAE8D0F00D38A65 /* CoreTelephony.framework */; };
+		3C6CD98E1AAE8D0F00D38A65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD9831AAE8D0F00D38A65 /* MapKit.framework */; };
+		3C6CD98F1AAE8D0F00D38A65 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6CD9841AAE8D0F00D38A65 /* AudioToolbox.framework */; };
+		DE41CF3D1AAE9527006A0A9F /* libAppCanEngine_IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE41CF3C1AAE9527006A0A9F /* libAppCanEngine_IOS.a */; };
+		F769E33A1AAE81C9009A471B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F769E3391AAE81C9009A471B /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F769E3341AAE81C9009A471B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C4BAC8B1AAE867C00B34133 /* EBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBrowserView.h; sourceTree = "<group>"; };
+		3C4BAC8C1AAE867C00B34133 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		3C4BAC8D1AAE867C00B34133 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		3C4BAC8E1AAE867C00B34133 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		3C4BAC8F1AAE867C00B34133 /* EUExInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUExInputTextFieldView.h; path = EUExInputTextFieldView/EUExInputTextFieldView.h; sourceTree = SOURCE_ROOT; };
+		3C4BAC901AAE867C00B34133 /* EUExInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUExInputTextFieldView.m; path = EUExInputTextFieldView/EUExInputTextFieldView.m; sourceTree = SOURCE_ROOT; };
+		3C4BAC931AAE867C00B34133 /* NSAttributedString+InputAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+InputAttributes.h"; sourceTree = "<group>"; };
+		3C4BAC941AAE867C00B34133 /* NSAttributedString+InputAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+InputAttributes.m"; sourceTree = "<group>"; };
+		3C4BAC951AAE867C00B34133 /* NSString+InputMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InputMessage.h"; sourceTree = "<group>"; };
+		3C4BAC961AAE867C00B34133 /* NSString+InputMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InputMessage.m"; sourceTree = "<group>"; };
+		3C4BAC971AAE867C00B34133 /* UIImage+InputXHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+InputXHRounded.h"; sourceTree = "<group>"; };
+		3C4BAC981AAE867C00B34133 /* UIImage+InputXHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+InputXHRounded.m"; sourceTree = "<group>"; };
+		3C4BAC9A1AAE867C00B34133 /* InputZBMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageAvatorFactory.h; sourceTree = "<group>"; };
+		3C4BAC9B1AAE867C00B34133 /* InputZBMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageAvatorFactory.m; sourceTree = "<group>"; };
+		3C4BAC9C1AAE867C00B34133 /* InputZBMessageBubbleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageBubbleFactory.h; sourceTree = "<group>"; };
+		3C4BAC9D1AAE867C00B34133 /* InputZBMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageBubbleFactory.m; sourceTree = "<group>"; };
+		3C4BAC9E1AAE867C00B34133 /* InputZBMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageVoiceFactory.h; sourceTree = "<group>"; };
+		3C4BAC9F1AAE867C00B34133 /* InputZBMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageVoiceFactory.m; sourceTree = "<group>"; };
+		3C4BACA01AAE867C00B34133 /* InputChatKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboard.h; sourceTree = "<group>"; };
+		3C4BACA11AAE867C00B34133 /* InputChatKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboard.m; sourceTree = "<group>"; };
+		3C4BACA21AAE867C00B34133 /* InputChatKeyboardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboardData.h; sourceTree = "<group>"; };
+		3C4BACA31AAE867C00B34133 /* InputChatKeyboardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboardData.m; sourceTree = "<group>"; };
+		3C4BACA41AAE867C00B34133 /* InputChatKeyboardUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboardUtility.h; sourceTree = "<group>"; };
+		3C4BACA51AAE867C00B34133 /* InputChatKeyboardUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboardUtility.m; sourceTree = "<group>"; };
+		3C4BACA71AAE867C00B34133 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		3C4BACA81AAE867C00B34133 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		3C4BACA91AAE867C00B34133 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		3C4BACAA1AAE867C00B34133 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		3C4BACAB1AAE867C00B34133 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		3C4BACAC1AAE867C00B34133 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		3C4BACAD1AAE867C00B34133 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		3C4BACAF1AAE867C00B34133 /* InputZBExpressionSectionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBExpressionSectionBar.h; sourceTree = "<group>"; };
+		3C4BACB01AAE867C00B34133 /* InputZBExpressionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBExpressionSectionBar.m; sourceTree = "<group>"; };
+		3C4BACB11AAE867C00B34133 /* InputZBFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBFaceView.h; sourceTree = "<group>"; };
+		3C4BACB21AAE867C00B34133 /* InputZBFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBFaceView.m; sourceTree = "<group>"; };
+		3C4BACB31AAE867C00B34133 /* InputZBMessageManagerFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageManagerFaceView.h; sourceTree = "<group>"; };
+		3C4BACB41AAE867C00B34133 /* InputZBMessageManagerFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageManagerFaceView.m; sourceTree = "<group>"; };
+		3C4BACB61AAE867C00B34133 /* InputZBMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageInputView.h; sourceTree = "<group>"; };
+		3C4BACB71AAE867C00B34133 /* InputZBMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageInputView.m; sourceTree = "<group>"; };
+		3C4BACB81AAE867C00B34133 /* InputZBMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageTextView.h; sourceTree = "<group>"; };
+		3C4BACB91AAE867C00B34133 /* InputZBMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageTextView.m; sourceTree = "<group>"; };
+		3C4BACBB1AAE867C00B34133 /* InputZBMessageShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageShareMenuItem.h; sourceTree = "<group>"; };
+		3C4BACBC1AAE867C00B34133 /* InputZBMessageShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageShareMenuItem.m; sourceTree = "<group>"; };
+		3C4BACBD1AAE867C00B34133 /* InputZBMessageShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageShareMenuView.h; sourceTree = "<group>"; };
+		3C4BACBE1AAE867C00B34133 /* InputZBMessageShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageShareMenuView.m; sourceTree = "<group>"; };
+		3C4BACC01AAE867C00B34133 /* InputZBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessage.h; sourceTree = "<group>"; };
+		3C4BACC11AAE867C00B34133 /* InputZBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessage.m; sourceTree = "<group>"; };
+		3C4BACC31AAE867C00B34133 /* InputXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputXMLReader.h; sourceTree = "<group>"; };
+		3C4BACC41AAE867C00B34133 /* InputXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputXMLReader.m; sourceTree = "<group>"; };
+		3C6CD97B1AAE8D0F00D38A65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C6CD97C1AAE8D0F00D38A65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C6CD97D1AAE8D0F00D38A65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3C6CD97E1AAE8D0F00D38A65 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3C6CD97F1AAE8D0F00D38A65 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3C6CD9801AAE8D0F00D38A65 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3C6CD9811AAE8D0F00D38A65 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3C6CD9821AAE8D0F00D38A65 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3C6CD9831AAE8D0F00D38A65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3C6CD9841AAE8D0F00D38A65 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DE41CF3C1AAE9527006A0A9F /* libAppCanEngine_IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppCanEngine_IOS.a; path = ../libAppCanEngine_IOS.a; sourceTree = "<group>"; };
+		F769E3361AAE81C9009A471B /* uexInputTextFieldView.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = uexInputTextFieldView.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F769E3391AAE81C9009A471B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F769E3331AAE81C9009A471B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6CD9881AAE8D0F00D38A65 /* QuartzCore.framework in Frameworks */,
+				3C6CD9871AAE8D0F00D38A65 /* CoreGraphics.framework in Frameworks */,
+				3C6CD98D1AAE8D0F00D38A65 /* CoreTelephony.framework in Frameworks */,
+				3C6CD98E1AAE8D0F00D38A65 /* MapKit.framework in Frameworks */,
+				3C6CD9861AAE8D0F00D38A65 /* UIKit.framework in Frameworks */,
+				3C6CD98A1AAE8D0F00D38A65 /* libsqlite3.dylib in Frameworks */,
+				F769E33A1AAE81C9009A471B /* Foundation.framework in Frameworks */,
+				3C6CD98C1AAE8D0F00D38A65 /* MobileCoreServices.framework in Frameworks */,
+				3C6CD98B1AAE8D0F00D38A65 /* SystemConfiguration.framework in Frameworks */,
+				3C6CD9891AAE8D0F00D38A65 /* libz.dylib in Frameworks */,
+				DE41CF3D1AAE9527006A0A9F /* libAppCanEngine_IOS.a in Frameworks */,
+				3C6CD98F1AAE8D0F00D38A65 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C4BAC8A1AAE867C00B34133 /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BAC8B1AAE867C00B34133 /* EBrowserView.h */,
+				3C4BAC8C1AAE867C00B34133 /* EUExBase.h */,
+				3C4BAC8D1AAE867C00B34133 /* EUExBaseDefine.h */,
+				3C4BAC8E1AAE867C00B34133 /* EUtility.h */,
+			);
+			name = engineHeader;
+			path = EUExInputTextFieldView/engineHeader;
+			sourceTree = SOURCE_ROOT;
+		};
+		3C4BAC911AAE867C00B34133 /* sourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BAC921AAE867C00B34133 /* Extend */,
+				3C4BAC991AAE867C00B34133 /* Factory */,
+				3C4BACA01AAE867C00B34133 /* InputChatKeyboard.h */,
+				3C4BACA11AAE867C00B34133 /* InputChatKeyboard.m */,
+				3C4BACA21AAE867C00B34133 /* InputChatKeyboardData.h */,
+				3C4BACA31AAE867C00B34133 /* InputChatKeyboardData.m */,
+				3C4BACA41AAE867C00B34133 /* InputChatKeyboardUtility.h */,
+				3C4BACA51AAE867C00B34133 /* InputChatKeyboardUtility.m */,
+				3C4BACA61AAE867C00B34133 /* json */,
+				3C4BACAE1AAE867C00B34133 /* messageFaceView */,
+				3C4BACB51AAE867C00B34133 /* MessageInputView */,
+				3C4BACBA1AAE867C00B34133 /* messageShareView */,
+				3C4BACBF1AAE867C00B34133 /* Models */,
+				3C4BACC21AAE867C00B34133 /* xmlRaeder */,
+			);
+			name = sourceCode;
+			path = EUExInputTextFieldView/sourceCode;
+			sourceTree = SOURCE_ROOT;
+		};
+		3C4BAC921AAE867C00B34133 /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BAC931AAE867C00B34133 /* NSAttributedString+InputAttributes.h */,
+				3C4BAC941AAE867C00B34133 /* NSAttributedString+InputAttributes.m */,
+				3C4BAC951AAE867C00B34133 /* NSString+InputMessage.h */,
+				3C4BAC961AAE867C00B34133 /* NSString+InputMessage.m */,
+				3C4BAC971AAE867C00B34133 /* UIImage+InputXHRounded.h */,
+				3C4BAC981AAE867C00B34133 /* UIImage+InputXHRounded.m */,
+			);
+			path = Extend;
+			sourceTree = "<group>";
+		};
+		3C4BAC991AAE867C00B34133 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BAC9A1AAE867C00B34133 /* InputZBMessageAvatorFactory.h */,
+				3C4BAC9B1AAE867C00B34133 /* InputZBMessageAvatorFactory.m */,
+				3C4BAC9C1AAE867C00B34133 /* InputZBMessageBubbleFactory.h */,
+				3C4BAC9D1AAE867C00B34133 /* InputZBMessageBubbleFactory.m */,
+				3C4BAC9E1AAE867C00B34133 /* InputZBMessageVoiceFactory.h */,
+				3C4BAC9F1AAE867C00B34133 /* InputZBMessageVoiceFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3C4BACA61AAE867C00B34133 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACA71AAE867C00B34133 /* JSON.h */,
+				3C4BACA81AAE867C00B34133 /* NSObject+SBJSON.h */,
+				3C4BACA91AAE867C00B34133 /* NSString+SBJSON.h */,
+				3C4BACAA1AAE867C00B34133 /* SBJSON.h */,
+				3C4BACAB1AAE867C00B34133 /* SBJsonBase.h */,
+				3C4BACAC1AAE867C00B34133 /* SBJsonParser.h */,
+				3C4BACAD1AAE867C00B34133 /* SBJsonWriter.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		3C4BACAE1AAE867C00B34133 /* messageFaceView */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACAF1AAE867C00B34133 /* InputZBExpressionSectionBar.h */,
+				3C4BACB01AAE867C00B34133 /* InputZBExpressionSectionBar.m */,
+				3C4BACB11AAE867C00B34133 /* InputZBFaceView.h */,
+				3C4BACB21AAE867C00B34133 /* InputZBFaceView.m */,
+				3C4BACB31AAE867C00B34133 /* InputZBMessageManagerFaceView.h */,
+				3C4BACB41AAE867C00B34133 /* InputZBMessageManagerFaceView.m */,
+			);
+			path = messageFaceView;
+			sourceTree = "<group>";
+		};
+		3C4BACB51AAE867C00B34133 /* MessageInputView */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACB61AAE867C00B34133 /* InputZBMessageInputView.h */,
+				3C4BACB71AAE867C00B34133 /* InputZBMessageInputView.m */,
+				3C4BACB81AAE867C00B34133 /* InputZBMessageTextView.h */,
+				3C4BACB91AAE867C00B34133 /* InputZBMessageTextView.m */,
+			);
+			path = MessageInputView;
+			sourceTree = "<group>";
+		};
+		3C4BACBA1AAE867C00B34133 /* messageShareView */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACBB1AAE867C00B34133 /* InputZBMessageShareMenuItem.h */,
+				3C4BACBC1AAE867C00B34133 /* InputZBMessageShareMenuItem.m */,
+				3C4BACBD1AAE867C00B34133 /* InputZBMessageShareMenuView.h */,
+				3C4BACBE1AAE867C00B34133 /* InputZBMessageShareMenuView.m */,
+			);
+			path = messageShareView;
+			sourceTree = "<group>";
+		};
+		3C4BACBF1AAE867C00B34133 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACC01AAE867C00B34133 /* InputZBMessage.h */,
+				3C4BACC11AAE867C00B34133 /* InputZBMessage.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C4BACC21AAE867C00B34133 /* xmlRaeder */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BACC31AAE867C00B34133 /* InputXMLReader.h */,
+				3C4BACC41AAE867C00B34133 /* InputXMLReader.m */,
+			);
+			path = xmlRaeder;
+			sourceTree = "<group>";
+		};
+		F769E32D1AAE81C9009A471B = {
+			isa = PBXGroup;
+			children = (
+				F769E33B1AAE81C9009A471B /* uexInputTextFieldView */,
+				F769E3381AAE81C9009A471B /* Frameworks */,
+				F769E3371AAE81C9009A471B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F769E3371AAE81C9009A471B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F769E3361AAE81C9009A471B /* uexInputTextFieldView.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F769E3381AAE81C9009A471B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE41CF3C1AAE9527006A0A9F /* libAppCanEngine_IOS.a */,
+				3C6CD97B1AAE8D0F00D38A65 /* UIKit.framework */,
+				3C6CD97C1AAE8D0F00D38A65 /* CoreGraphics.framework */,
+				3C6CD97D1AAE8D0F00D38A65 /* QuartzCore.framework */,
+				3C6CD97E1AAE8D0F00D38A65 /* libz.dylib */,
+				3C6CD97F1AAE8D0F00D38A65 /* libsqlite3.dylib */,
+				3C6CD9801AAE8D0F00D38A65 /* SystemConfiguration.framework */,
+				3C6CD9811AAE8D0F00D38A65 /* MobileCoreServices.framework */,
+				3C6CD9821AAE8D0F00D38A65 /* CoreTelephony.framework */,
+				3C6CD9831AAE8D0F00D38A65 /* MapKit.framework */,
+				3C6CD9841AAE8D0F00D38A65 /* AudioToolbox.framework */,
+				F769E3391AAE81C9009A471B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F769E33B1AAE81C9009A471B /* uexInputTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				3C4BAC8A1AAE867C00B34133 /* engineHeader */,
+				3C4BAC8F1AAE867C00B34133 /* EUExInputTextFieldView.h */,
+				3C4BAC901AAE867C00B34133 /* EUExInputTextFieldView.m */,
+				3C4BAC911AAE867C00B34133 /* sourceCode */,
+			);
+			path = uexInputTextFieldView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F769E3351AAE81C9009A471B /* uexInputTextFieldView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F769E3591AAE81C9009A471B /* Build configuration list for PBXNativeTarget "uexInputTextFieldView" */;
+			buildPhases = (
+				F769E3321AAE81C9009A471B /* Sources */,
+				F769E3331AAE81C9009A471B /* Frameworks */,
+				F769E3341AAE81C9009A471B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uexInputTextFieldView;
+			productName = uexInputTextFieldView;
+			productReference = F769E3361AAE81C9009A471B /* uexInputTextFieldView.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F769E32E1AAE81C9009A471B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = AppCan.can;
+			};
+			buildConfigurationList = F769E3311AAE81C9009A471B /* Build configuration list for PBXProject "uexInputTextFieldView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F769E32D1AAE81C9009A471B;
+			productRefGroup = F769E3371AAE81C9009A471B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F769E3351AAE81C9009A471B /* uexInputTextFieldView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F769E3321AAE81C9009A471B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C4BACD51AAE867C00B34133 /* InputZBMessageShareMenuItem.m in Sources */,
+				3C4BACC91AAE867C00B34133 /* UIImage+InputXHRounded.m in Sources */,
+				3C4BACD61AAE867C00B34133 /* InputZBMessageShareMenuView.m in Sources */,
+				3C4BACCC1AAE867C00B34133 /* InputZBMessageVoiceFactory.m in Sources */,
+				3C4BACCF1AAE867C00B34133 /* InputChatKeyboardUtility.m in Sources */,
+				3C4BACCB1AAE867C00B34133 /* InputZBMessageBubbleFactory.m in Sources */,
+				3C4BACC61AAE867C00B34133 /* EUExInputTextFieldView.m in Sources */,
+				3C4BACC81AAE867C00B34133 /* NSString+InputMessage.m in Sources */,
+				3C4BACD71AAE867C00B34133 /* InputZBMessage.m in Sources */,
+				3C4BACD41AAE867C00B34133 /* InputZBMessageTextView.m in Sources */,
+				3C4BACCA1AAE867C00B34133 /* InputZBMessageAvatorFactory.m in Sources */,
+				3C4BACD81AAE867C00B34133 /* InputXMLReader.m in Sources */,
+				3C4BACC71AAE867C00B34133 /* NSAttributedString+InputAttributes.m in Sources */,
+				3C4BACD31AAE867C00B34133 /* InputZBMessageInputView.m in Sources */,
+				3C4BACD01AAE867C00B34133 /* InputZBExpressionSectionBar.m in Sources */,
+				3C4BACCE1AAE867C00B34133 /* InputChatKeyboardData.m in Sources */,
+				3C4BACD11AAE867C00B34133 /* InputZBFaceView.m in Sources */,
+				3C4BACD21AAE867C00B34133 /* InputZBMessageManagerFaceView.m in Sources */,
+				3C4BACCD1AAE867C00B34133 /* InputChatKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F769E3571AAE81C9009A471B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wang GuoChun (GJL3LN9D59)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexInputTextFieldView";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		F769E3581AAE81C9009A471B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wang GuoChun (GJL3LN9D59)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexInputTextFieldView";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		F769E35A1AAE81C9009A471B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: leilei xu (T8E4RVNP82)";
+				DSTROOT = /tmp/uexInputTextFieldView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/EUExInputTextFieldView-eklyphymsyubmgfddgfmjynnecyt/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F769E35B1AAE81C9009A471B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: leilei xu (T8E4RVNP82)";
+				DSTROOT = /tmp/uexInputTextFieldView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/EUExInputTextFieldView-eklyphymsyubmgfddgfmjynnecyt/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F769E3311AAE81C9009A471B /* Build configuration list for PBXProject "uexInputTextFieldView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F769E3571AAE81C9009A471B /* Debug */,
+				F769E3581AAE81C9009A471B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F769E3591AAE81C9009A471B /* Build configuration list for PBXNativeTarget "uexInputTextFieldView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F769E35A1AAE81C9009A471B /* Debug */,
+				F769E35B1AAE81C9009A471B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F769E32E1AAE81C9009A471B /* Project object */;
+}

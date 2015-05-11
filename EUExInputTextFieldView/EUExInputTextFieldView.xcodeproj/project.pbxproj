@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C7DD5811AAD83E500FDE63B /* EUExInputTextFieldView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */; };
+		3C7DD5831AAD83E500FDE63B /* EUExInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */; };
+		3C7DD5DC1AAD853C00FDE63B /* InputChatKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5A91AAD853C00FDE63B /* InputChatKeyboard.m */; };
+		3C7DD5DD1AAD853C00FDE63B /* InputChatKeyboardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5AB1AAD853C00FDE63B /* InputChatKeyboardData.m */; };
+		3C7DD5DE1AAD853C00FDE63B /* InputChatKeyboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5AD1AAD853C00FDE63B /* InputChatKeyboardUtility.m */; };
+		3C7DD5DF1AAD853C00FDE63B /* NSAttributedString+InputAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5B01AAD853C00FDE63B /* NSAttributedString+InputAttributes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3C7DD5E01AAD853C00FDE63B /* NSString+InputMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5B21AAD853C00FDE63B /* NSString+InputMessage.m */; };
+		3C7DD5E11AAD853C00FDE63B /* UIImage+InputXHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5B41AAD853C00FDE63B /* UIImage+InputXHRounded.m */; };
+		3C7DD5E21AAD853C00FDE63B /* InputZBMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5B71AAD853C00FDE63B /* InputZBMessageAvatorFactory.m */; };
+		3C7DD5E31AAD853C00FDE63B /* InputZBMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5B91AAD853C00FDE63B /* InputZBMessageBubbleFactory.m */; };
+		3C7DD5E41AAD853C00FDE63B /* InputZBMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5BB1AAD853C00FDE63B /* InputZBMessageVoiceFactory.m */; };
+		3C7DD5E51AAD853C00FDE63B /* InputZBExpressionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5C61AAD853C00FDE63B /* InputZBExpressionSectionBar.m */; };
+		3C7DD5E61AAD853C00FDE63B /* InputZBFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5C81AAD853C00FDE63B /* InputZBFaceView.m */; };
+		3C7DD5E71AAD853C00FDE63B /* InputZBMessageManagerFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5CA1AAD853C00FDE63B /* InputZBMessageManagerFaceView.m */; };
+		3C7DD5E81AAD853C00FDE63B /* InputZBMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5CD1AAD853C00FDE63B /* InputZBMessageInputView.m */; };
+		3C7DD5E91AAD853C00FDE63B /* InputZBMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5CF1AAD853C00FDE63B /* InputZBMessageTextView.m */; };
+		3C7DD5EA1AAD853C00FDE63B /* InputZBMessageShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5D21AAD853C00FDE63B /* InputZBMessageShareMenuItem.m */; };
+		3C7DD5EB1AAD853C00FDE63B /* InputZBMessageShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5D41AAD853C00FDE63B /* InputZBMessageShareMenuView.m */; };
+		3C7DD5EC1AAD853C00FDE63B /* InputZBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5D71AAD853C00FDE63B /* InputZBMessage.m */; };
+		3C7DD5ED1AAD853C00FDE63B /* InputXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5DA1AAD853C00FDE63B /* InputXMLReader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C7DD57B1AAD83E500FDE63B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3C7DD5811AAD83E500FDE63B /* EUExInputTextFieldView.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C7DD57D1AAD83E500FDE63B /* libuexInputTextFieldView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexInputTextFieldView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExInputTextFieldView.h; sourceTree = "<group>"; };
+		3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExInputTextFieldView.m; sourceTree = "<group>"; };
+		3C7DD5A11AAD842000FDE63B /* EBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBrowserView.h; sourceTree = "<group>"; };
+		3C7DD5A21AAD842000FDE63B /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		3C7DD5A31AAD842000FDE63B /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		3C7DD5A41AAD842000FDE63B /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		3C7DD5A81AAD853C00FDE63B /* InputChatKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboard.h; sourceTree = "<group>"; };
+		3C7DD5A91AAD853C00FDE63B /* InputChatKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboard.m; sourceTree = "<group>"; };
+		3C7DD5AA1AAD853C00FDE63B /* InputChatKeyboardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboardData.h; sourceTree = "<group>"; };
+		3C7DD5AB1AAD853C00FDE63B /* InputChatKeyboardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboardData.m; sourceTree = "<group>"; };
+		3C7DD5AC1AAD853C00FDE63B /* InputChatKeyboardUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboardUtility.h; sourceTree = "<group>"; };
+		3C7DD5AD1AAD853C00FDE63B /* InputChatKeyboardUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboardUtility.m; sourceTree = "<group>"; };
+		3C7DD5AF1AAD853C00FDE63B /* NSAttributedString+InputAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+InputAttributes.h"; sourceTree = "<group>"; };
+		3C7DD5B01AAD853C00FDE63B /* NSAttributedString+InputAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+InputAttributes.m"; sourceTree = "<group>"; };
+		3C7DD5B11AAD853C00FDE63B /* NSString+InputMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InputMessage.h"; sourceTree = "<group>"; };
+		3C7DD5B21AAD853C00FDE63B /* NSString+InputMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InputMessage.m"; sourceTree = "<group>"; };
+		3C7DD5B31AAD853C00FDE63B /* UIImage+InputXHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+InputXHRounded.h"; sourceTree = "<group>"; };
+		3C7DD5B41AAD853C00FDE63B /* UIImage+InputXHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+InputXHRounded.m"; sourceTree = "<group>"; };
+		3C7DD5B61AAD853C00FDE63B /* InputZBMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageAvatorFactory.h; sourceTree = "<group>"; };
+		3C7DD5B71AAD853C00FDE63B /* InputZBMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageAvatorFactory.m; sourceTree = "<group>"; };
+		3C7DD5B81AAD853C00FDE63B /* InputZBMessageBubbleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageBubbleFactory.h; sourceTree = "<group>"; };
+		3C7DD5B91AAD853C00FDE63B /* InputZBMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageBubbleFactory.m; sourceTree = "<group>"; };
+		3C7DD5BA1AAD853C00FDE63B /* InputZBMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageVoiceFactory.h; sourceTree = "<group>"; };
+		3C7DD5BB1AAD853C00FDE63B /* InputZBMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageVoiceFactory.m; sourceTree = "<group>"; };
+		3C7DD5BD1AAD853C00FDE63B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		3C7DD5BE1AAD853C00FDE63B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		3C7DD5BF1AAD853C00FDE63B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		3C7DD5C01AAD853C00FDE63B /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		3C7DD5C11AAD853C00FDE63B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		3C7DD5C21AAD853C00FDE63B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		3C7DD5C31AAD853C00FDE63B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		3C7DD5C51AAD853C00FDE63B /* InputZBExpressionSectionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBExpressionSectionBar.h; sourceTree = "<group>"; };
+		3C7DD5C61AAD853C00FDE63B /* InputZBExpressionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBExpressionSectionBar.m; sourceTree = "<group>"; };
+		3C7DD5C71AAD853C00FDE63B /* InputZBFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBFaceView.h; sourceTree = "<group>"; };
+		3C7DD5C81AAD853C00FDE63B /* InputZBFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBFaceView.m; sourceTree = "<group>"; };
+		3C7DD5C91AAD853C00FDE63B /* InputZBMessageManagerFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageManagerFaceView.h; sourceTree = "<group>"; };
+		3C7DD5CA1AAD853C00FDE63B /* InputZBMessageManagerFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageManagerFaceView.m; sourceTree = "<group>"; };
+		3C7DD5CC1AAD853C00FDE63B /* InputZBMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageInputView.h; sourceTree = "<group>"; };
+		3C7DD5CD1AAD853C00FDE63B /* InputZBMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageInputView.m; sourceTree = "<group>"; };
+		3C7DD5CE1AAD853C00FDE63B /* InputZBMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageTextView.h; sourceTree = "<group>"; };
+		3C7DD5CF1AAD853C00FDE63B /* InputZBMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageTextView.m; sourceTree = "<group>"; };
+		3C7DD5D11AAD853C00FDE63B /* InputZBMessageShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageShareMenuItem.h; sourceTree = "<group>"; };
+		3C7DD5D21AAD853C00FDE63B /* InputZBMessageShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageShareMenuItem.m; sourceTree = "<group>"; };
+		3C7DD5D31AAD853C00FDE63B /* InputZBMessageShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageShareMenuView.h; sourceTree = "<group>"; };
+		3C7DD5D41AAD853C00FDE63B /* InputZBMessageShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageShareMenuView.m; sourceTree = "<group>"; };
+		3C7DD5D61AAD853C00FDE63B /* InputZBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessage.h; sourceTree = "<group>"; };
+		3C7DD5D71AAD853C00FDE63B /* InputZBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessage.m; sourceTree = "<group>"; };
+		3C7DD5D91AAD853C00FDE63B /* InputXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputXMLReader.h; sourceTree = "<group>"; };
+		3C7DD5DA1AAD853C00FDE63B /* InputXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputXMLReader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C7DD57A1AAD83E500FDE63B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C7DD5741AAD83E500FDE63B = {
+			isa = PBXGroup;
+			children = (
+				3C7DD57F1AAD83E500FDE63B /* EUExInputTextFieldView */,
+				3C7DD57E1AAD83E500FDE63B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C7DD57E1AAD83E500FDE63B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD57D1AAD83E500FDE63B /* libuexInputTextFieldView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C7DD57F1AAD83E500FDE63B /* EUExInputTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5A01AAD842000FDE63B /* engineHeader */,
+				3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */,
+				3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */,
+				3C7DD5A51AAD853C00FDE63B /* sourceCode */,
+			);
+			path = EUExInputTextFieldView;
+			sourceTree = "<group>";
+		};
+		3C7DD5A01AAD842000FDE63B /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5A11AAD842000FDE63B /* EBrowserView.h */,
+				3C7DD5A21AAD842000FDE63B /* EUExBase.h */,
+				3C7DD5A31AAD842000FDE63B /* EUExBaseDefine.h */,
+				3C7DD5A41AAD842000FDE63B /* EUtility.h */,
+			);
+			path = engineHeader;
+			sourceTree = "<group>";
+		};
+		3C7DD5A51AAD853C00FDE63B /* sourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5A81AAD853C00FDE63B /* InputChatKeyboard.h */,
+				3C7DD5A91AAD853C00FDE63B /* InputChatKeyboard.m */,
+				3C7DD5AA1AAD853C00FDE63B /* InputChatKeyboardData.h */,
+				3C7DD5AB1AAD853C00FDE63B /* InputChatKeyboardData.m */,
+				3C7DD5AC1AAD853C00FDE63B /* InputChatKeyboardUtility.h */,
+				3C7DD5AD1AAD853C00FDE63B /* InputChatKeyboardUtility.m */,
+				3C7DD5AE1AAD853C00FDE63B /* Extend */,
+				3C7DD5B51AAD853C00FDE63B /* Factory */,
+				3C7DD5BC1AAD853C00FDE63B /* json */,
+				3C7DD5C41AAD853C00FDE63B /* messageFaceView */,
+				3C7DD5CB1AAD853C00FDE63B /* MessageInputView */,
+				3C7DD5D01AAD853C00FDE63B /* messageShareView */,
+				3C7DD5D51AAD853C00FDE63B /* Models */,
+				3C7DD5D81AAD853C00FDE63B /* xmlRaeder */,
+			);
+			path = sourceCode;
+			sourceTree = "<group>";
+		};
+		3C7DD5AE1AAD853C00FDE63B /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5AF1AAD853C00FDE63B /* NSAttributedString+InputAttributes.h */,
+				3C7DD5B01AAD853C00FDE63B /* NSAttributedString+InputAttributes.m */,
+				3C7DD5B11AAD853C00FDE63B /* NSString+InputMessage.h */,
+				3C7DD5B21AAD853C00FDE63B /* NSString+InputMessage.m */,
+				3C7DD5B31AAD853C00FDE63B /* UIImage+InputXHRounded.h */,
+				3C7DD5B41AAD853C00FDE63B /* UIImage+InputXHRounded.m */,
+			);
+			path = Extend;
+			sourceTree = "<group>";
+		};
+		3C7DD5B51AAD853C00FDE63B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5B61AAD853C00FDE63B /* InputZBMessageAvatorFactory.h */,
+				3C7DD5B71AAD853C00FDE63B /* InputZBMessageAvatorFactory.m */,
+				3C7DD5B81AAD853C00FDE63B /* InputZBMessageBubbleFactory.h */,
+				3C7DD5B91AAD853C00FDE63B /* InputZBMessageBubbleFactory.m */,
+				3C7DD5BA1AAD853C00FDE63B /* InputZBMessageVoiceFactory.h */,
+				3C7DD5BB1AAD853C00FDE63B /* InputZBMessageVoiceFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3C7DD5BC1AAD853C00FDE63B /* json */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5BD1AAD853C00FDE63B /* JSON.h */,
+				3C7DD5BE1AAD853C00FDE63B /* NSObject+SBJSON.h */,
+				3C7DD5BF1AAD853C00FDE63B /* NSString+SBJSON.h */,
+				3C7DD5C01AAD853C00FDE63B /* SBJSON.h */,
+				3C7DD5C11AAD853C00FDE63B /* SBJsonBase.h */,
+				3C7DD5C21AAD853C00FDE63B /* SBJsonParser.h */,
+				3C7DD5C31AAD853C00FDE63B /* SBJsonWriter.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		3C7DD5C41AAD853C00FDE63B /* messageFaceView */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5C51AAD853C00FDE63B /* InputZBExpressionSectionBar.h */,
+				3C7DD5C61AAD853C00FDE63B /* InputZBExpressionSectionBar.m */,
+				3C7DD5C71AAD853C00FDE63B /* InputZBFaceView.h */,
+				3C7DD5C81AAD853C00FDE63B /* InputZBFaceView.m */,
+				3C7DD5C91AAD853C00FDE63B /* InputZBMessageManagerFaceView.h */,
+				3C7DD5CA1AAD853C00FDE63B /* InputZBMessageManagerFaceView.m */,
+			);
+			path = messageFaceView;
+			sourceTree = "<group>";
+		};
+		3C7DD5CB1AAD853C00FDE63B /* MessageInputView */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5CC1AAD853C00FDE63B /* InputZBMessageInputView.h */,
+				3C7DD5CD1AAD853C00FDE63B /* InputZBMessageInputView.m */,
+				3C7DD5CE1AAD853C00FDE63B /* InputZBMessageTextView.h */,
+				3C7DD5CF1AAD853C00FDE63B /* InputZBMessageTextView.m */,
+			);
+			path = MessageInputView;
+			sourceTree = "<group>";
+		};
+		3C7DD5D01AAD853C00FDE63B /* messageShareView */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5D11AAD853C00FDE63B /* InputZBMessageShareMenuItem.h */,
+				3C7DD5D21AAD853C00FDE63B /* InputZBMessageShareMenuItem.m */,
+				3C7DD5D31AAD853C00FDE63B /* InputZBMessageShareMenuView.h */,
+				3C7DD5D41AAD853C00FDE63B /* InputZBMessageShareMenuView.m */,
+			);
+			path = messageShareView;
+			sourceTree = "<group>";
+		};
+		3C7DD5D51AAD853C00FDE63B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5D61AAD853C00FDE63B /* InputZBMessage.h */,
+				3C7DD5D71AAD853C00FDE63B /* InputZBMessage.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C7DD5D81AAD853C00FDE63B /* xmlRaeder */ = {
+			isa = PBXGroup;
+			children = (
+				3C7DD5D91AAD853C00FDE63B /* InputXMLReader.h */,
+				3C7DD5DA1AAD853C00FDE63B /* InputXMLReader.m */,
+			);
+			path = xmlRaeder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C7DD57C1AAD83E500FDE63B /* EUExInputTextFieldView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C7DD5911AAD83E600FDE63B /* Build configuration list for PBXNativeTarget "EUExInputTextFieldView" */;
+			buildPhases = (
+				3C7DD5791AAD83E500FDE63B /* Sources */,
+				3C7DD57A1AAD83E500FDE63B /* Frameworks */,
+				3C7DD57B1AAD83E500FDE63B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUExInputTextFieldView;
+			productName = EUExInputTextFieldView;
+			productReference = 3C7DD57D1AAD83E500FDE63B /* libuexInputTextFieldView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C7DD5751AAD83E500FDE63B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = com.zywx;
+				TargetAttributes = {
+					3C7DD57C1AAD83E500FDE63B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3C7DD5781AAD83E500FDE63B /* Build configuration list for PBXProject "EUExInputTextFieldView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3C7DD5741AAD83E500FDE63B;
+			productRefGroup = 3C7DD57E1AAD83E500FDE63B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C7DD57C1AAD83E500FDE63B /* EUExInputTextFieldView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C7DD5791AAD83E500FDE63B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7DD5EA1AAD853C00FDE63B /* InputZBMessageShareMenuItem.m in Sources */,
+				3C7DD5E41AAD853C00FDE63B /* InputZBMessageVoiceFactory.m in Sources */,
+				3C7DD5ED1AAD853C00FDE63B /* InputXMLReader.m in Sources */,
+				3C7DD5E81AAD853C00FDE63B /* InputZBMessageInputView.m in Sources */,
+				3C7DD5EB1AAD853C00FDE63B /* InputZBMessageShareMenuView.m in Sources */,
+				3C7DD5E21AAD853C00FDE63B /* InputZBMessageAvatorFactory.m in Sources */,
+				3C7DD5DD1AAD853C00FDE63B /* InputChatKeyboardData.m in Sources */,
+				3C7DD5DC1AAD853C00FDE63B /* InputChatKeyboard.m in Sources */,
+				3C7DD5DE1AAD853C00FDE63B /* InputChatKeyboardUtility.m in Sources */,
+				3C7DD5E11AAD853C00FDE63B /* UIImage+InputXHRounded.m in Sources */,
+				3C7DD5E61AAD853C00FDE63B /* InputZBFaceView.m in Sources */,
+				3C7DD5DF1AAD853C00FDE63B /* NSAttributedString+InputAttributes.m in Sources */,
+				3C7DD5EC1AAD853C00FDE63B /* InputZBMessage.m in Sources */,
+				3C7DD5831AAD83E500FDE63B /* EUExInputTextFieldView.m in Sources */,
+				3C7DD5E51AAD853C00FDE63B /* InputZBExpressionSectionBar.m in Sources */,
+				3C7DD5E71AAD853C00FDE63B /* InputZBMessageManagerFaceView.m in Sources */,
+				3C7DD5E31AAD853C00FDE63B /* InputZBMessageBubbleFactory.m in Sources */,
+				3C7DD5E01AAD853C00FDE63B /* NSString+InputMessage.m in Sources */,
+				3C7DD5E91AAD853C00FDE63B /* InputZBMessageTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3C7DD58F1AAD83E600FDE63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexInputTextFieldView";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3C7DD5901AAD83E600FDE63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexInputTextFieldView";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C7DD5921AAD83E600FDE63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexInputTextFieldView;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3C7DD5931AAD83E600FDE63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexInputTextFieldView;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C7DD5781AAD83E500FDE63B /* Build configuration list for PBXProject "EUExInputTextFieldView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7DD58F1AAD83E600FDE63B /* Debug */,
+				3C7DD5901AAD83E600FDE63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C7DD5911AAD83E600FDE63B /* Build configuration list for PBXNativeTarget "EUExInputTextFieldView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7DD5921AAD83E600FDE63B /* Debug */,
+				3C7DD5931AAD83E600FDE63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C7DD5751AAD83E500FDE63B /* Project object */;
+}
