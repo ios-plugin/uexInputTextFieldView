@@ -11,12 +11,12 @@
 #import "InputXMLReader.h"
 #import "InputChatKeyboardData.h"
 
-@interface EUExInputTextFieldView()
+@interface EUExInputTextFieldView()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) InputChatKeyboard * chatKeyboard;
 @property (nonatomic, strong) NSString * delete;
 @property (nonatomic, strong) NSString * pageNum;
-
+@property (nonatomic, strong) UITapGestureRecognizer * tapGR;
 @end
 
 @implementation EUExInputTextFieldView
@@ -29,6 +29,11 @@
 }
 
 -(void)clean {
+    if (_tapGR) {
+        
+        _tapGR.delegate = nil;
+        _tapGR = nil;
+    }
     if (_chatKeyboard) {
         [_chatKeyboard close];
         _chatKeyboard = nil;
@@ -56,7 +61,49 @@
     
     if (!_chatKeyboard) {
         _chatKeyboard = [[InputChatKeyboard alloc]initWithUexobj:self];
+        if([xmlDic objectForKey:@"bottom"]){
+            _chatKeyboard.bottomOffset=[[xmlDic objectForKey:@"bottom"] floatValue];
+        }
         [_chatKeyboard open];
+        _tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
+        
+        [self.meBrwView addGestureRecognizer:_tapGR];
+        
+        _tapGR.delegate = self;
+
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return YES;
+}
+
+- (void)hideKeyboard:(NSMutableArray*)inArguments {
+    
+    if (_chatKeyboard) {
+        
+        [_chatKeyboard hideKeyboard];
+        
+    }
+    
+}
+
+- (void)changeWebViewFrame:(NSMutableArray *)array {
+    NSLog(@"进入changeWebViewFrame");
+    float h = [[array objectAtIndex:0] floatValue];
+    NSLog(@"height=%lf",h);
+    if (_chatKeyboard) {
+        [_chatKeyboard changeWebView:h];
     }
 }
 
@@ -102,4 +149,9 @@
     }
 }
 
+-(void)setInputFocused:(NSMutableArray *)array {
+    
+    [_chatKeyboard.messageToolView.messageInputTextView becomeFirstResponder];
+
+}
 @end

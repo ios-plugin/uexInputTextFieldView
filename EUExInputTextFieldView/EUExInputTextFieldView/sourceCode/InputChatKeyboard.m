@@ -27,6 +27,8 @@
         self.uexObj = uexObj;
         self.animationDuration = 0.25;
         self.isInit = YES;
+        self.keyboardStatus = @"0";
+        self.bottomOffset=0;
     }
     return self;
 }
@@ -65,6 +67,8 @@
 }
 
 -(void)open {
+    
+    
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(keyboardWillShow:)
                                                 name:UIKeyboardWillShowNotification
@@ -157,12 +161,43 @@
         
     }
 }
+
+- (void)changeWebView:(float)height {
+    NSLog(@"进入changeWebView");
+    float yy = self.uexObj.meBrwView.frame.origin.y;
+    CGRect tempRect = self.uexObj.meBrwView.scrollView.frame;
+    NSLog(@"获取scrollView的Rect=%@;Y坐标=%lf",self.uexObj.meBrwView.scrollView,yy);
+    tempRect.size.height = CGRectGetMinY(self.messageToolView.frame) - yy;
+    self.uexObj.meBrwView.scrollView.frame = tempRect;
+    NSLog(@"获取修改之后scrollView的Rect=%@",self.uexObj.meBrwView.scrollView);
+    
+    [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
+    
+    if (CGRectGetMinY(self.messageToolView.frame) < yy + height) {
+        NSLog(@"有遮挡设偏移量====%lf",yy + height - CGRectGetMinY(self.messageToolView.frame));
+        [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame))];
+    }
+    
+}
+
 #pragma mark - messageView animation
 - (void)messageViewAnimationWithMessageRect:(CGRect)rect  withMessageInputViewRect:(CGRect)inputViewRect andDuration:(double)duration andState:(ZBMessageViewState)state{
     
-    [UIView animateWithDuration:duration+0.1 animations:^{
-        self.messageToolView.frame = CGRectMake(0.0f,UEX_SCREENHEIGHT-CGRectGetHeight(rect)-CGRectGetHeight(inputViewRect),UEX_SCREENWIDTH,CGRectGetHeight(inputViewRect));
+    [UIView animateWithDuration:duration-0.7 animations:^{
         
+        CGFloat offsetHeight=self.bottomOffset;
+        if(CGRectGetHeight(rect)>offsetHeight){
+            offsetHeight=CGRectGetHeight(rect);
+        }
+        
+       self.messageToolView.frame = CGRectMake(0.0f,UEX_SCREENHEIGHT-CGRectGetHeight(rect)-CGRectGetHeight(inputViewRect),UEX_SCREENWIDTH,CGRectGetHeight(inputViewRect));
+        
+        CGRect tempRect = self.uexObj.meBrwView.scrollView.frame;
+        tempRect.size.height = CGRectGetMinY(self.messageToolView.frame)+self.bottomOffset+CGRectGetHeight(inputViewRect);
+        
+        self.uexObj.meBrwView.scrollView.frame = tempRect;
+        NSLog(@"messageViewAnimationWithMessageRect触发是scrollView的调整值%@",self.uexObj.meBrwView.scrollView);
+
         switch (state) {
             case ZBMessageViewStateShowFace:
             {
@@ -198,7 +233,38 @@
     } completion:^(BOOL finished) {
         
     }];
+    
+    NSString * status = @"0";
+    
+    if (CGRectGetHeight(rect) > 0) {
+        status = @"1";
+    } else {
+        if (self.uexObj.meBrwView.scrollView.frame.size.height >= self.uexObj.meBrwView.scrollView.contentOffset.y) {
+            [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
+        } else {
+            [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, self.uexObj.meBrwView.scrollView.contentOffset.y)];
+        }
+        
+    }
+    
+    NSDictionary * jsDic = [NSDictionary dictionaryWithObject:status forKey:@"status"];
+    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onKeyBoardShow!=null){uexInputTextFieldView.onKeyBoardShow(\'%@\');}", [jsDic JSONFragment]];
+    
+    //if (![status isEqualToString:_keyboardStatus]) {
+    //_keyboardStatus = status;
+    [self performSelectorOnMainThread:@selector(onKeyboardShowCallback:) withObject:jsStr waitUntilDone:NO];
+    //}
+
 }
+
+- (void)onKeyboardShowCallback:(id)userInfo {
+    
+    NSString *jsStr = (NSString *)userInfo;
+    
+    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
+    
+}
+
 #pragma end
 
 #pragma mark - ZBMessageInputView Delegate
@@ -331,12 +397,18 @@
     NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onCommit!=null){uexInputTextFieldView.onCommit(\'%@\');}", [jsDic JSONFragment]];
     [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
     
+    NSString *cbJsonStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onCommitJson!=null){uexInputTextFieldView.onCommitJson(%@);}", [jsDic JSONFragment]];
     
-
+    NSDictionary * cbDic = [NSDictionary dictionaryWithObject:cbJsonStr forKey:@"cbKey"];
+    
+    NSString * cbjson = [cbDic objectForKey:@"cbKey"];
+    
+    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:cbjson];
     
     [messageInputTextView resignFirstResponder];
     [messageInputTextView setText:nil];
     [self inputTextViewDidChange:messageInputTextView];
+    
 }
 
 
@@ -476,7 +548,19 @@
     
 }
 
+- (void)hideKeyboard {
+    
+    [self.messageToolView.messageInputTextView resignFirstResponder];
+    
+    if (CGRectGetMaxY(self.messageToolView.frame) < UEX_SCREENHEIGHT) {
+        
+        [self messageViewAnimationWithMessageRect:CGRectZero
+                         withMessageInputViewRect:self.messageToolView.frame
+                                      andDuration:self.animationDuration
+                                         andState:ZBMessageViewStateShowNone];
+    }
 
+}
 
 
 

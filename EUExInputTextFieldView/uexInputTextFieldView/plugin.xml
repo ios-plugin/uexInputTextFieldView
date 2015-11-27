@@ -3,5 +3,7 @@
     <plugin name="uexInputTextFieldView">
         <method name="open"></method>
         <method name="close"></method>
+        <method name="changeWebViewFrame"></method>
+        <method name="setInputFocused"></method>
     </plugin>
 </uexplugins>
