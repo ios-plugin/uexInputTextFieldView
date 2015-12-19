@@ -55,7 +55,6 @@ typedef NS_ENUM(NSInteger,ZBMessageViewState) {
 
 @property (nonatomic,assign)CGFloat bottomOffset;
 
-
 -(instancetype)initWithUexobj:(EUExInputTextFieldView *)uexObj;
 -(void)open;
 -(void)close;

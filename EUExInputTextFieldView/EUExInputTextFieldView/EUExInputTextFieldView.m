@@ -70,7 +70,7 @@
         [self.meBrwView addGestureRecognizer:_tapGR];
         
         _tapGR.delegate = self;
-
+    
     }
 }
 
