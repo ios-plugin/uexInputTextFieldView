@@ -99,9 +99,7 @@
 }
 
 - (void)changeWebViewFrame:(NSMutableArray *)array {
-    NSLog(@"进入changeWebViewFrame");
     float h = [[array objectAtIndex:0] floatValue];
-    NSLog(@"height=%lf",h);
     if (_chatKeyboard) {
         [_chatKeyboard changeWebView:h];
     }

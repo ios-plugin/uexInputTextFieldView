@@ -32,7 +32,7 @@
         // 上下垂直间隔
         CGFloat verticalInterval = (CGRectGetHeight(self.bounds)-2*EdgeInterVal -Lines*FaceSize)/(Lines-1);
         
-        NSLog(@"%f,%f",verticalInterval,CGRectGetHeight(self.bounds));
+
         
         for (int i = 0; i<Lines; i++)
         {

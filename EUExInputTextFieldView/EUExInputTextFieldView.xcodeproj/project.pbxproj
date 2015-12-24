@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C7DD5811AAD83E500FDE63B /* EUExInputTextFieldView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */; };
 		3C7DD5831AAD83E500FDE63B /* EUExInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */; };
 		3C7DD5DC1AAD853C00FDE63B /* InputChatKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5A91AAD853C00FDE63B /* InputChatKeyboard.m */; };
 		3C7DD5DD1AAD853C00FDE63B /* InputChatKeyboardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7DD5AB1AAD853C00FDE63B /* InputChatKeyboardData.m */; };
@@ -43,19 +42,6 @@
 		42EE61411C2AB272007CFCB4 /* ToolViewKeyboard_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EE61321C2AB272007CFCB4 /* ToolViewKeyboard_ios7@2x.png */; };
 		42EE61421C2AB272007CFCB4 /* TypeSelectorBtn_Black_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EE61331C2AB272007CFCB4 /* TypeSelectorBtn_Black_ios7@2x.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3C7DD57B1AAD83E500FDE63B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				3C7DD5811AAD83E500FDE63B /* EUExInputTextFieldView.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C7DD57D1AAD83E500FDE63B /* libuexInputTextFieldView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexInputTextFieldView.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,7 +333,6 @@
 			buildPhases = (
 				3C7DD5791AAD83E500FDE63B /* Sources */,
 				3C7DD57A1AAD83E500FDE63B /* Frameworks */,
-				3C7DD57B1AAD83E500FDE63B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -640,6 +625,7 @@
 				42EE61221C2AB1B5007CFCB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
