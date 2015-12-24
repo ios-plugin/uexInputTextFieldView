@@ -41,8 +41,8 @@
         default:
             break;
     }
-    NSString * bublleImagePath = [NSString stringWithFormat:@"uexInputTextFieldView/messageBubbleResource/%@@2x",messageTypeString];
-    UIImage *bublleImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:bublleImagePath ofType:@"png"]];
+
+    UIImage *bublleImage = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: [NSString stringWithFormat:@"messageBubbleResource/%@@2x.png",messageTypeString]]];
     UIEdgeInsets bubbleImageEdgeInsets = [self bubbleImageEdgeInsetsWithStyle];
     [bublleImage resizableImageWithCapInsets:bubbleImageEdgeInsets];
     return bublleImage;
