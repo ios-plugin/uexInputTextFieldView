@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger,ZBMessageViewState) {
 
 @interface InputChatKeyboard : NSObject<InputZBMessageInputViewDelegate,InputZBMessageShareMenuViewDelegate,InputZBMessageManagerFaceViewDelegate>
 
-@property (nonatomic, retain) EUExInputTextFieldView * uexObj;
+@property (nonatomic, weak) EUExInputTextFieldView * uexObj;
 
 @property (nonatomic,strong) InputZBMessageInputView *messageToolView;
 
