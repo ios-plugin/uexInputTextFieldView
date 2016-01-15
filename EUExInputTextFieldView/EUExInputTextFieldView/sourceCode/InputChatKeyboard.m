@@ -156,12 +156,11 @@
 
 - (void)changeWebView:(float)height {
     
-
     float yy = self.uexObj.meBrwView.frame.origin.y;
-
+    NSLog(@"changeWebView==>>meBrwView=%@,scrollView=%@",self.uexObj.meBrwView,self.uexObj.meBrwView.scrollView);
     [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
     if (CGRectGetMinY(self.messageToolView.frame) < yy + height) {
-
+        NSLog(@"changeWebView==>>有遮挡设偏移量====%lf",yy + height - CGRectGetMinY(self.messageToolView.frame));
         [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame))];
     }
     
@@ -169,8 +168,12 @@
  
 #pragma mark - messageView animation
 - (void)messageViewAnimationWithMessageRect:(CGRect)rect  withMessageInputViewRect:(CGRect)inputViewRect andDuration:(double)duration andState:(ZBMessageViewState)state{
-    
-    [UIView animateWithDuration:duration-0.7 animations:^{
+    if (CGRectGetHeight(rect) > 0) {
+        duration = duration + 0.1;
+    }else{
+        duration = 0.01;
+    }
+    [UIView animateWithDuration:duration animations:^{
         
         CGFloat offsetHeight=self.bottomOffset;
         if(CGRectGetHeight(rect)>offsetHeight){
@@ -183,7 +186,7 @@
         tempRect.size.height = CGRectGetMinY(self.messageToolView.frame)+self.bottomOffset+CGRectGetHeight(inputViewRect);
         
         self.uexObj.meBrwView.scrollView.frame = tempRect;
-
+        NSLog(@"messageViewAnimationWithMessageRect==>>触发时scrollView的调整值%@",self.uexObj.meBrwView.scrollView);
 
         switch (state) {
             case ZBMessageViewStateShowFace:
@@ -233,13 +236,13 @@
         if (self.uexObj.meBrwView.scrollView.frame.size.height >= self.uexObj.meBrwView.scrollView.contentOffset.y) {
             [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
         } else {
-            
+            NSLog(@"messageViewAnimationWithMessageRect==>>键盘收回时meBrwView=%@",self.uexObj.meBrwView);
 
             [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, self.uexObj.meBrwView.scrollView.contentOffset.y + self.uexObj.meBrwView.frame.origin.y)];
         }
         
     }
-
+    NSLog(@"messageViewAnimationWithMessageRect==>>messageInputTextView=%@;meBrwView=%@;scrollView=%@",self.messageToolView.messageInputTextView,self.uexObj.meBrwView,self.uexObj.meBrwView.scrollView);
     
     NSDictionary * jsDic = [NSDictionary dictionaryWithObject:status forKey:@"status"];
     NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onKeyBoardShow!=null){uexInputTextFieldView.onKeyBoardShow(\'%@\');}", [jsDic JSONFragment]];
