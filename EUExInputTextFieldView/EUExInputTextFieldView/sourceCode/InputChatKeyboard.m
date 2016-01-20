@@ -108,8 +108,8 @@
         [self.sendButton setTitle:@"  发送" forState:UIControlStateNormal];
         [self.sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 
-        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"messageInputViewResource/EmotionsSendBtnGrey@2x.png"]] forState:UIControlStateNormal];
-        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"messageInputViewResource/EmotionsSendBtnBlueHL@2x.png"]] forState:UIControlStateHighlighted];
+        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnGrey@2x.png"]] forState:UIControlStateNormal];
+        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnBlueHL@2x.png"]] forState:UIControlStateHighlighted];
         [EUtility brwView:self.uexObj.meBrwView addSubview:self.sendButton];
         [self.sendButton addTarget:self action:@selector(sendButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
         

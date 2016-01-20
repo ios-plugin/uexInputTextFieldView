@@ -184,8 +184,8 @@
     
     
     // 发送表情
-    self.faceSendButton = [self createButtonWithImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/ToolViewEmotion_ios7@2x.png"]] HLImage:nil];
-    [self.faceSendButton setImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/ToolViewKeyboard_ios7@2x.png"]]
+    self.faceSendButton = [self createButtonWithImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"ToolViewEmotion_ios7@2x.png"]] HLImage:nil];
+    [self.faceSendButton setImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"ToolViewKeyboard_ios7@2x.png"]]
                          forState:UIControlStateSelected];
     [self.faceSendButton addTarget:self
                             action:@selector(messageStyleButtonClicked:)
@@ -316,16 +316,16 @@
     {
         _messageInputViewStyle = ZBMessageInputViewStyleDefault;
         
-        self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/input-bar-flat@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f) resizingMode:UIImageResizingModeStretch];
+        self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"input-bar-flat@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f) resizingMode:UIImageResizingModeStretch];
     }
     else
     {
         
         _messageInputViewStyle = ZBMessageInputViewStyleQuasiphysical;
         if ([[[UIDevice currentDevice]systemVersion]floatValue]>=6 ){
-        self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/input-bar-background@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f) resizingMode:UIImageResizingModeStretch];
+        self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"input-bar-background@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f) resizingMode:UIImageResizingModeStretch];
         } else {
-            self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/input-bar-background@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)];
+            self.image = [[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"input-bar-background@2x.png"]] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)];
         }
         
     }

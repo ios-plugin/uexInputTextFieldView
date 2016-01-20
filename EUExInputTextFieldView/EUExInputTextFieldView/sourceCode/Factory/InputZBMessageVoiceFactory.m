@@ -26,12 +26,12 @@
     NSMutableArray *images = [NSMutableArray arrayWithCapacity:4];
     for (NSInteger i = 0; i < 4; i ++) {
         //[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"messageInputViewResource/input-bar-background@2x.png"]]
-        NSString * imagePath = [NSString stringWithFormat:@"voiceResource/%@VoiceNodePlaying00%ld@2x.png",imageSepatorName,(long)i];
+        NSString * imagePath = [NSString stringWithFormat:@"%@VoiceNodePlaying00%ld@2x.png",imageSepatorName,(long)i];
         UIImage *image = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:imagePath]];
         if (image)
             [images addObject:image];
     }
-    NSString * messageVoiceAniamtionImageViewPath = [NSString stringWithFormat:@"voiceResource/%@VoiceNodePlaying@2x.png",imageSepatorName];
+    NSString * messageVoiceAniamtionImageViewPath = [NSString stringWithFormat:@"%@VoiceNodePlaying@2x.png",imageSepatorName];
     messageVoiceAniamtionImageView.image = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:messageVoiceAniamtionImageViewPath]];
     messageVoiceAniamtionImageView.animationImages = images;
     messageVoiceAniamtionImageView.animationDuration = 1.0;

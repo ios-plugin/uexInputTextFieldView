@@ -42,7 +42,7 @@
             break;
     }
 
-    UIImage *bublleImage = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: [NSString stringWithFormat:@"messageBubbleResource/%@@2x.png",messageTypeString]]];
+    UIImage *bublleImage = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: [NSString stringWithFormat:@"%@@2x.png",messageTypeString]]];
     UIEdgeInsets bubbleImageEdgeInsets = [self bubbleImageEdgeInsetsWithStyle];
     [bublleImage resizableImageWithCapInsets:bubbleImageEdgeInsets];
     return bublleImage;
