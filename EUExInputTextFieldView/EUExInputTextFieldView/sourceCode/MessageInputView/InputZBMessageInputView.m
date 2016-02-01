@@ -49,7 +49,6 @@
             self.faceSendButton.selected = NO;
             self.multiMediaSendButton.selected = NO;
             sender.selected = !sender.selected;
-            
             if (sender.selected) {
 
                 [self.messageInputTextView resignFirstResponder];
@@ -75,7 +74,6 @@
         {
             self.multiMediaSendButton.selected = NO;
             self.voiceChangeButton.selected = NO;
-            
             sender.selected = !sender.selected;
             if (sender.selected) {
 

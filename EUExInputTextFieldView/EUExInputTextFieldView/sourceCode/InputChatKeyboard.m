@@ -15,6 +15,28 @@
 #define UEX_SCREENWIDTH (isSysVersionAbove7_0?[UIScreen mainScreen].bounds.size.width:[UIScreen mainScreen].applicationFrame.size.width)
 #define UEX_SCREENHEIGHT (isSysVersionAbove7_0?[UIScreen mainScreen].bounds.size.height:[UIScreen mainScreen].applicationFrame.size.height)
 
+@implementation UIButton (FillColor)
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state {
+    [self setBackgroundImage:[UIButton imageWithColor:backgroundColor] forState:state];
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+@end
+
 @implementation InputChatKeyboard
 
 -(instancetype)initWithUexobj:(EUExInputTextFieldView *)uexObj{
@@ -99,17 +121,23 @@
 - (void)shareFaceView{
 
     if (!self.faceView) {
+        InputChatKeyboardData *chatKeyboardData = [InputChatKeyboardData sharedChatKeyboardData];
         self.faceView = [[InputZBMessageManagerFaceView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT, UEX_SCREENWIDTH, 196) andFacePath:self.facePath];
         self.faceView.delegate = self;
         [EUtility brwView:self.uexObj.meBrwView addSubview:self.faceView];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.sendButton.frame = CGRectMake(UEX_SCREENWIDTH-70, CGRectGetMaxY(self.faceView.frame)+3, 70, 37);
-        [self.sendButton setTitle:@"  发送" forState:UIControlStateNormal];
-        [self.sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [self.sendButton setTitle:chatKeyboardData.sendBtnText forState:UIControlStateNormal];
+        [self.sendButton setTitleColor:chatKeyboardData.sendBtnTextColor forState:UIControlStateNormal];
+        [self.sendButton setBackgroundColor:chatKeyboardData.sendBtnbgColorUp];
+        [self.sendButton setBackgroundColor:chatKeyboardData.sendBtnbgColorDown forState:UIControlStateHighlighted];
+        self.sendButton.titleLabel.font = [UIFont systemFontOfSize:chatKeyboardData.sendBtnTextSize];
+        self.sendButton.layer.borderWidth = 0.6;
+        self.sendButton.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 
-        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnGrey@2x.png"]] forState:UIControlStateNormal];
-        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnBlueHL@2x.png"]] forState:UIControlStateHighlighted];
+//        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnGrey@2x.png"]] forState:UIControlStateNormal];
+//        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnBlueHL@2x.png"]] forState:UIControlStateHighlighted];
         [EUtility brwView:self.uexObj.meBrwView addSubview:self.sendButton];
         [self.sendButton addTarget:self action:@selector(sendButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -229,6 +257,7 @@
     if (CGRectGetHeight(rect) > 0) {
         status = @"1";
     } else {
+        
         CGRect tmpRect = self.uexObj.meBrwView.scrollView.frame;
         tmpRect.size.height = self.uexObj.meBrwView.frame.size.height;
         self.uexObj.meBrwView.scrollView.frame = tmpRect;

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
-    <plugin uexName="uexInputTextFieldView" version="3.0.7" build="7">
-        <info>7:修复键盘弹出收回时显示头像图标页</info>
+    <plugin uexName="uexInputTextFieldView" version="3.0.8" build="8">
+        <info>8:修改发送按钮自定义</info>
+        <build>7:修复键盘弹出收回时显示头像图标页</build>
         <build>6:添加IDE支持</build>
         <build>5:修改键盘弹出时页面弹动，修改键盘收回时遮挡评论</build>
         <build>4:点击空白处收回键盘，添加setInputFocused接口，添加changeWebViewFrame接口，修改输入单引号收不到信息</build>

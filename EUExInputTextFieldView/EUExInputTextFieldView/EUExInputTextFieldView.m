@@ -41,7 +41,7 @@
 }
 
 -(void)open:(NSMutableArray *)array {
-    
+    InputChatKeyboardData *chatKeyboardData = [InputChatKeyboardData sharedChatKeyboardData];
     NSDictionary * xmlDic = [[array objectAtIndex:0] JSONValue];
     NSString * xmlPath = [self absPath:[xmlDic objectForKey:@"emojicons"]];
     
@@ -49,15 +49,52 @@
     if ([xmlDic objectForKey:@"placeHold"]) {
         placeHold = [xmlDic objectForKey:@"placeHold"];
     }
-    [InputChatKeyboardData sharedChatKeyboardData].placeHold = placeHold;
+    chatKeyboardData.placeHold = placeHold;
     [self getFaceDicByFaceXMLPath:xmlPath];
     
     NSArray * facePathArray = [xmlPath componentsSeparatedByString:@"/"];
     NSString * fileName = [facePathArray lastObject];
     NSRange range = [xmlPath rangeOfString:fileName];
     xmlPath = [xmlPath substringToIndex:range.location];
-    [InputChatKeyboardData sharedChatKeyboardData].facePath = xmlPath;
+    chatKeyboardData.facePath = xmlPath;
     
+    float textSize = 30.0;
+    if ([xmlDic objectForKey:@"textSize"]) {
+        textSize = [[xmlDic objectForKey:@"textSize"] floatValue];
+    }
+    BOOL isAudio=NO;
+    if([xmlDic objectForKey:@"inputMode"]&&[[xmlDic objectForKey:@"inputMode"] integerValue]==1){
+        isAudio=YES;
+    }
+    UIColor * sendBtnbgColorUp = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.5];
+    if ([xmlDic objectForKey:@"sendBtnbgColorUp"]) {
+        NSString * sendBtnbgColorUpStr = [xmlDic objectForKey:@"sendBtnbgColorUp"];
+        sendBtnbgColorUp = [EUtility ColorFromString:sendBtnbgColorUpStr];
+    }
+    UIColor * sendBtnbgColorDown = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    if ([xmlDic objectForKey:@"sendBtnbgColorDown"]) {
+        NSString * sendBtnbgColorDownStr = [xmlDic objectForKey:@"sendBtnbgColorDown"];
+        sendBtnbgColorDown = [EUtility ColorFromString:sendBtnbgColorDownStr];
+    }
+    NSString * sendBtnText = @"发送";
+    if ([xmlDic objectForKey:@"sendBtnText"]) {
+        sendBtnText = [NSString stringWithFormat:@"%@",[xmlDic objectForKey:@"sendBtnText"]];
+    }
+    float sendBtnTextSize = 14.0;
+    if ([xmlDic objectForKey:@"sendBtnTextSize"]) {
+        sendBtnTextSize = [[xmlDic objectForKey:@"sendBtnTextSize"] floatValue];
+    }
+    UIColor * sendBtnTextColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0];
+    if ([xmlDic objectForKey:@"sendBtnTextColor"]) {
+        NSString * sendBtnTextColorStr = [xmlDic objectForKey:@"sendBtnTextColor"];
+        sendBtnTextColor = [EUtility ColorFromString:sendBtnTextColorStr];
+    }
+
+    chatKeyboardData.sendBtnbgColorUp = sendBtnbgColorUp;
+    chatKeyboardData.sendBtnbgColorDown = sendBtnbgColorDown;
+    chatKeyboardData.sendBtnText = sendBtnText;
+    chatKeyboardData.sendBtnTextSize = sendBtnTextSize;
+    chatKeyboardData.sendBtnTextColor = sendBtnTextColor;
     
     if (!_chatKeyboard) {
         _chatKeyboard = [[InputChatKeyboard alloc]initWithUexobj:self];
