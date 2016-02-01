@@ -145,6 +145,8 @@ typedef enum
  */
 + (CGFloat)maxHeight;
 
+@property (nonatomic,assign)BOOL isKeyBoardShow;
+
 #pragma end
 
 @end
