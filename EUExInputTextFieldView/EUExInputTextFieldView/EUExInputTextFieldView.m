@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString * delete;
 @property (nonatomic, strong) NSString * pageNum;
 @property (nonatomic, strong) UITapGestureRecognizer * tapGR;
+@property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @end
 
 @implementation EUExInputTextFieldView
@@ -34,6 +35,13 @@
         _tapGR.delegate = nil;
         _tapGR = nil;
     }
+    
+    if (_panRecognizer) {
+        
+        _panRecognizer.delegate = nil;
+        _panRecognizer = nil;
+    }
+    
     if (_chatKeyboard) {
         [_chatKeyboard close];
         _chatKeyboard = nil;
@@ -107,6 +115,13 @@
         [self.meBrwView addGestureRecognizer:_tapGR];
         
         _tapGR.delegate = self;
+        
+        _panRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
+        
+        [self.meBrwView addGestureRecognizer:_panRecognizer];
+        
+        _panRecognizer.delegate = self;
+
     
     }
 }
