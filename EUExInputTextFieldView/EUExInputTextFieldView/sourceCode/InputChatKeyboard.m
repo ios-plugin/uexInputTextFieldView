@@ -98,7 +98,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(keyboardChange:)
-                                                name:UIKeyboardDidChangeFrameNotification
+                                                name:UIKeyboardWillChangeFrameNotification
                                               object:nil];
     
     
