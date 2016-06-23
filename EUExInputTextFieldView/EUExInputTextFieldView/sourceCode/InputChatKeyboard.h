@@ -11,10 +11,9 @@
 #import "InputZBMessageInputView.h"
 #import "InputZBMessageShareMenuView.h"
 #import "InputZBMessageManagerFaceView.h"
-#import "EBrowserView.h"
 #import "InputZBMessage.h"
 #import "InputChatKeyboardUtility.h"
-#import "JSON.h"
+
 
 typedef NS_ENUM(NSInteger,ZBMessageViewState) {
     ZBMessageViewStateShowFace,

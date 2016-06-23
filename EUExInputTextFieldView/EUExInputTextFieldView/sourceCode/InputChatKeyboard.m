@@ -112,7 +112,7 @@
     self.messageToolView = [[InputZBMessageInputView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT - _inputViewHeight,UEX_SCREENWIDTH,_inputViewHeight)];
     
     self.messageToolView.delegate = self;
-    [EUtility brwView:self.uexObj.meBrwView addSubview:self.messageToolView];
+    [[self.uexObj.webViewEngine webView] addSubview:self.messageToolView];
     
     [self shareFaceView];
 
@@ -124,7 +124,7 @@
         InputChatKeyboardData *chatKeyboardData = [InputChatKeyboardData sharedChatKeyboardData];
         self.faceView = [[InputZBMessageManagerFaceView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT, UEX_SCREENWIDTH, 196) andFacePath:self.facePath];
         self.faceView.delegate = self;
-        [EUtility brwView:self.uexObj.meBrwView addSubview:self.faceView];
+        [[self.uexObj.webViewEngine webView] addSubview:self.faceView];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.sendButton.frame = CGRectMake(UEX_SCREENWIDTH-70, CGRectGetMaxY(self.faceView.frame)+3, 70, 37);
@@ -138,7 +138,7 @@
 
 //        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnGrey@2x.png"]] forState:UIControlStateNormal];
 //        [self.sendButton setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:@"EmotionsSendBtnBlueHL@2x.png"]] forState:UIControlStateHighlighted];
-        [EUtility brwView:self.uexObj.meBrwView addSubview:self.sendButton];
+        [[self.uexObj.webViewEngine webView] addSubview:self.sendButton];
         [self.sendButton addTarget:self action:@selector(sendButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
         
     }
@@ -158,7 +158,7 @@
     if (!self.shareMenuView)
     {
         self.shareMenuView = [[InputZBMessageShareMenuView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT,UEX_SCREENWIDTH, 196)];
-        [EUtility brwView:self.uexObj.meBrwView addSubview:self.shareMenuView];
+        [[self.uexObj.webViewEngine webView] addSubview:self.shareMenuView];
 
         self.shareMenuView.delegate = self;
         
@@ -184,12 +184,10 @@
 
 - (void)changeWebView:(float)height {
     
-    float yy = self.uexObj.meBrwView.frame.origin.y;
-    NSLog(@"changeWebView==>>meBrwView=%@,scrollView=%@",self.uexObj.meBrwView,self.uexObj.meBrwView.scrollView);
-    [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
+    float yy = [self.uexObj.webViewEngine webView].frame.origin.y;
+    [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, 0)];
     if (CGRectGetMinY(self.messageToolView.frame) < yy + height) {
-        NSLog(@"changeWebView==>>有遮挡设偏移量====%lf",yy + height - CGRectGetMinY(self.messageToolView.frame));
-        [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame))];
+        [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame))];
     }
     
 }
@@ -210,11 +208,11 @@
         
         self.messageToolView.frame = CGRectMake(0.0f,UEX_SCREENHEIGHT-offsetHeight-CGRectGetHeight(inputViewRect),UEX_SCREENWIDTH,CGRectGetHeight(inputViewRect));
         
-        CGRect tempRect = self.uexObj.meBrwView.scrollView.frame;
+        CGRect tempRect = [self.uexObj.webViewEngine webScrollView].frame;
         tempRect.size.height = CGRectGetMinY(self.messageToolView.frame)+self.bottomOffset+CGRectGetHeight(inputViewRect);
         
-        self.uexObj.meBrwView.scrollView.frame = tempRect;
-        NSLog(@"messageViewAnimationWithMessageRect==>>触发时scrollView的调整值%@",self.uexObj.meBrwView.scrollView);
+        [self.uexObj.webViewEngine webScrollView].frame = tempRect;
+
 
         switch (state) {
             case ZBMessageViewStateShowFace:
@@ -252,44 +250,33 @@
         
     }];
     
-    NSString * status = @"0";
+    NSInteger status = 0;
     
     if (CGRectGetHeight(rect) > 0) {
-        status = @"1";
+        status = 1;
     } else {
         
-        CGRect tmpRect = self.uexObj.meBrwView.scrollView.frame;
-        tmpRect.size.height = self.uexObj.meBrwView.frame.size.height;
-        self.uexObj.meBrwView.scrollView.frame = tmpRect;
+        CGRect tmpRect = [self.uexObj.webViewEngine webScrollView].frame;
+        tmpRect.size.height = [self.uexObj.webViewEngine webView].frame.size.height;
+        [self.uexObj.webViewEngine webScrollView].frame = tmpRect;
 
-        if (self.uexObj.meBrwView.scrollView.frame.size.height >= self.uexObj.meBrwView.scrollView.contentOffset.y) {
-            [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, 0)];
+        if ([self.uexObj.webViewEngine webScrollView].frame.size.height >= [self.uexObj.webViewEngine webScrollView].contentOffset.y) {
+            [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, 0)];
         } else {
-            NSLog(@"messageViewAnimationWithMessageRect==>>键盘收回时meBrwView=%@",self.uexObj.meBrwView);
 
-            [self.uexObj.meBrwView.scrollView setContentOffset:CGPointMake(0, self.uexObj.meBrwView.scrollView.contentOffset.y + self.uexObj.meBrwView.frame.origin.y)];
+
+            [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, [self.uexObj.webViewEngine webScrollView].contentOffset.y + [self.uexObj.webViewEngine webView].frame.origin.y)];
         }
         
     }
-    NSLog(@"messageViewAnimationWithMessageRect==>>messageInputTextView=%@;meBrwView=%@;scrollView=%@",self.messageToolView.messageInputTextView,self.uexObj.meBrwView,self.uexObj.meBrwView.scrollView);
     
-    NSDictionary * jsDic = [NSDictionary dictionaryWithObject:status forKey:@"status"];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onKeyBoardShow!=null){uexInputTextFieldView.onKeyBoardShow(\'%@\');}", [jsDic JSONFragment]];
     
-    //if (![status isEqualToString:_keyboardStatus]) {
-    //_keyboardStatus = status;
-    [self performSelectorOnMainThread:@selector(onKeyboardShowCallback:) withObject:jsStr waitUntilDone:NO];
-    //}
+    NSDictionary * jsDic = @{@"status":@(status)};
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onKeyBoardShow" arguments:ACArgsPack(jsDic.ac_JSONFragment)];
 
 }
 
-- (void)onKeyboardShowCallback:(id)userInfo {
-    
-    NSString *jsStr = (NSString *)userInfo;
-    
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
-    
-}
+
 
 #pragma end
 
@@ -420,16 +407,12 @@
 - (void)didSendTextAction:(InputZBMessageTextView *)messageInputTextView{
     
     NSDictionary * jsDic = [NSDictionary dictionaryWithObject:messageInputTextView.text forKey:@"emojiconsText"];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onCommit!=null){uexInputTextFieldView.onCommit(\'%@\');}", [jsDic JSONFragment]];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
     
-    NSString *cbJsonStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onCommitJson!=null){uexInputTextFieldView.onCommitJson(%@);}", [jsDic JSONFragment]];
     
-    NSDictionary * cbDic = [NSDictionary dictionaryWithObject:cbJsonStr forKey:@"cbKey"];
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onCommit" arguments:ACArgsPack(jsDic.ac_JSONFragment)];
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onCommitJson" arguments:ACArgsPack(jsDic)];
     
-    NSString * cbjson = [cbDic objectForKey:@"cbKey"];
-    
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:cbjson];
+
     
     [messageInputTextView resignFirstResponder];
     [messageInputTextView setText:nil];
@@ -481,7 +464,7 @@
 #pragma mark - ZBMessageShareMenuView Delegate
 - (void)didSelecteShareMenuItem:(InputZBMessageShareMenuItem *)shareMenuItem atIndex:(NSInteger)index{
     NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onShareMenuItem!=null){uexInputTextFieldView.onShareMenuItem(%d);}", (int)index];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
+    [[self.uexObj.webViewEngine webView] stringByEvaluatingJavaScriptFromString:jsStr];
     [self doActionWithSelectShareMenuItemIndex:index];
     [self messageViewAnimationWithMessageRect:CGRectZero
                      withMessageInputViewRect:self.messageToolView.frame
@@ -508,7 +491,7 @@
 
 - (void)keyboardChange:(NSNotification *)notification{
 
-    if ([[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y<CGRectGetHeight(self.uexObj.meBrwView.frame)) {
+    if ([[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y<CGRectGetHeight([self.uexObj.webViewEngine webView].frame)) {
         [self messageViewAnimationWithMessageRect:[[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue]
                          withMessageInputViewRect:self.messageToolView.frame
                                       andDuration:0.25
@@ -526,10 +509,12 @@
 }
 
 -(void)didTimeOut{
-    NSDictionary * cbDic = [NSDictionary dictionaryWithObjectsAndKeys:@"2",@"status",@"2",@"voicePath", nil];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onVoiceAction!=null){uexInputTextFieldView.onVoiceAction(\'%@\');}", [cbDic JSONFragment]];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
     
+    NSDictionary *cbDic = @{
+                            @"status":@2,
+                            @"voicePath":@2
+                            };
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onVoiceAction" arguments:ACArgsPack(cbDic.ac_JSONFragment)];
     
     _messageToolView.holdDownButton.selected = NO;
     _messageToolView.holdDownButton.highlighted = NO;
@@ -539,28 +524,22 @@
  *  按下录音按钮开始录音
  */
 - (void)didStartRecordingVoiceAction{
-
-    NSDictionary * cbDic = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"status",@"0",@"voicePath", nil];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onVoiceAction!=null){uexInputTextFieldView.onVoiceAction(\'%@\');}", [cbDic JSONFragment]];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
-    
-    
-    
-    
+    NSDictionary *cbDic = @{
+                            @"status":@0,
+                            @"voicePath":@0
+                            };
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onVoiceAction" arguments:ACArgsPack(cbDic.ac_JSONFragment)];
 }
 
 /**
  *  手指向上滑动取消录音
  */
 - (void)didCancelRecordingVoiceAction{
-    
-
-    
-    NSDictionary * cbDic = [NSDictionary dictionaryWithObjectsAndKeys:@"-1",@"status",@"-1",@"voicePath", nil];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onVoiceAction!=null){uexInputTextFieldView.onVoiceAction(\'%@\');}", [cbDic JSONFragment]];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
-    
-    
+    NSDictionary *cbDic = @{
+                            @"status":@-1,
+                            @"voicePath":@-1
+                            };
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onVoiceAction" arguments:ACArgsPack(cbDic.ac_JSONFragment)];
 }
 
 /**
@@ -568,11 +547,12 @@
  */
 - (void)didFinishRecoingVoiceAction{
     
+    NSDictionary *cbDic = @{
+                            @"status":@1,
+                            @"voicePath":@1
+                            };
+    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onVoiceAction" arguments:ACArgsPack(cbDic.ac_JSONFragment)];
 
-    
-    NSDictionary * cbDic = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"status",@"1",@"voicePath", nil];
-    NSString *jsStr = [NSString stringWithFormat:@"if(uexInputTextFieldView.onVoiceAction!=null){uexInputTextFieldView.onVoiceAction(\'%@\');}", [cbDic JSONFragment]];
-    [self.uexObj.meBrwView stringByEvaluatingJavaScriptFromString:jsStr];
     
 }
 
