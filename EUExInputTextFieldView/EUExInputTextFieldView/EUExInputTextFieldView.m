@@ -72,12 +72,12 @@
     if([xmlDic objectForKey:@"inputMode"]&&[[xmlDic objectForKey:@"inputMode"] integerValue]==1){
         isAudio=YES;
     }
-    UIColor * sendBtnbgColorUp = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.5];
+    UIColor * sendBtnbgColorUp = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
     if ([xmlDic objectForKey:@"sendBtnbgColorUp"]) {
         NSString * sendBtnbgColorUpStr = [xmlDic objectForKey:@"sendBtnbgColorUp"];
         sendBtnbgColorUp = [UIColor ac_ColorWithHTMLColorString:sendBtnbgColorUpStr];
     }
-    UIColor * sendBtnbgColorDown = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    UIColor * sendBtnbgColorDown = [UIColor colorWithRed:1 green:1 blue:1 alpha:1.0];
     if ([xmlDic objectForKey:@"sendBtnbgColorDown"]) {
         NSString * sendBtnbgColorDownStr = [xmlDic objectForKey:@"sendBtnbgColorDown"];
         sendBtnbgColorDown = [UIColor ac_ColorWithHTMLColorString:sendBtnbgColorDownStr];
@@ -90,7 +90,7 @@
     if ([xmlDic objectForKey:@"sendBtnTextSize"]) {
         sendBtnTextSize = [[xmlDic objectForKey:@"sendBtnTextSize"] floatValue];
     }
-    UIColor * sendBtnTextColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0];
+    UIColor * sendBtnTextColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
     if ([xmlDic objectForKey:@"sendBtnTextColor"]) {
         NSString * sendBtnTextColorStr = [xmlDic objectForKey:@"sendBtnTextColor"];
         sendBtnTextColor = [UIColor ac_ColorWithHTMLColorString:sendBtnTextColorStr];
@@ -105,7 +105,7 @@
     if (!_chatKeyboard) {
         _chatKeyboard = [[InputChatKeyboard alloc]initWithUexobj:self];
         if([xmlDic objectForKey:@"bottom"]){
-            _chatKeyboard.bottomOffset=[[xmlDic objectForKey:@"bottom"] floatValue];
+            _chatKeyboard.bottomOffset = [[xmlDic objectForKey:@"bottom"] floatValue];
         }
         [_chatKeyboard open];
         _tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
@@ -129,14 +129,10 @@
     return YES;
 }
 
-- (void)hideKeyboard:(NSMutableArray*)inArguments {
-    
-    if (_chatKeyboard) {
-        
+- (void)hideKeyboard:(UITapGestureRecognizer *)tapGR {
+    if (_chatKeyboard && [tapGR locationInView:[self.webViewEngine webView]].y < CGRectGetMinY(_chatKeyboard.messageToolView.frame)) {
         [_chatKeyboard hideKeyboard];
-        
     }
-    
 }
 
 - (void)changeWebViewFrame:(NSMutableArray *)inArguments {

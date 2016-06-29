@@ -11,6 +11,8 @@
 
 
 
+
+
 #define isSysVersionAbove7_0 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define UEX_SCREENWIDTH (isSysVersionAbove7_0?[UIScreen mainScreen].bounds.size.width:[UIScreen mainScreen].applicationFrame.size.width)
 #define UEX_SCREENHEIGHT (isSysVersionAbove7_0?[UIScreen mainScreen].bounds.size.height:[UIScreen mainScreen].applicationFrame.size.height)
@@ -37,15 +39,21 @@
 
 @end
 
+
+@interface InputChatKeyboard()
+@property  (nonatomic,assign)BOOL keyboardShouldHide;
+@end
+
+
 @implementation InputChatKeyboard
 
 -(instancetype)initWithUexobj:(EUExInputTextFieldView *)uexObj{
     if (self = [super init]) {
-        self.uexObj = uexObj;
-        self.animationDuration = 0.25;
-        self.isInit = YES;
-        self.keyboardStatus = @"0";
-        self.bottomOffset=0;
+        _uexObj = uexObj;
+        _animationDuration = 0.25;
+        _isInit = YES;
+        _bottomOffset = 0;
+        _keyboardShouldHide = YES;
     }
     return self;
 }
@@ -109,7 +117,7 @@
         _inputViewHeight = 40.0f;
     }
     
-    self.messageToolView = [[InputZBMessageInputView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT - _inputViewHeight,UEX_SCREENWIDTH,_inputViewHeight)];
+    self.messageToolView = [[InputZBMessageInputView alloc]initWithFrame:CGRectMake(0.0f,UEX_SCREENHEIGHT - _inputViewHeight - _bottomOffset,UEX_SCREENWIDTH,_inputViewHeight)];
     
     self.messageToolView.delegate = self;
     [[self.uexObj.webViewEngine webView] addSubview:self.messageToolView];
@@ -145,6 +153,7 @@
 }
 
 -(void)sendButtonDidClicked:(id)sender {
+    _keyboardShouldHide = YES;
     [self didSendTextAction:self.messageToolView.messageInputTextView];
     [self messageViewAnimationWithMessageRect:CGRectZero
                      withMessageInputViewRect:self.messageToolView.frame
@@ -184,11 +193,13 @@
 
 - (void)changeWebView:(float)height {
     
-    float yy = [self.uexObj.webViewEngine webView].frame.origin.y;
-    [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, 0)];
-    if (CGRectGetMinY(self.messageToolView.frame) < yy + height) {
-        [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame))];
-    }
+//    float yy = [self.uexObj.webViewEngine webView].frame.origin.y;
+//    CGPoint point = CGPointZero;
+//    if (CGRectGetMinY(self.messageToolView.frame) < yy + height) {
+//        point = CGPointMake(0, yy + height - CGRectGetMinY(self.messageToolView.frame));
+//    }
+//    ACLogDebug(@"%@",@(point.y));
+//    [[self.uexObj.webViewEngine webScrollView] setContentOffset:point];
     
 }
  
@@ -199,21 +210,20 @@
     }else{
         duration = 0.01;
     }
+    
+    
+
+    
+    
+    //ACLogDebug(@"msgRect:%@,inputRect%@",[NSValue valueWithCGRect:rect],[NSValue valueWithCGRect:inputViewRect]);
     [UIView animateWithDuration:duration animations:^{
         
-        CGFloat offsetHeight=self.bottomOffset;
+        CGFloat offsetHeight = self.bottomOffset;
         if(CGRectGetHeight(rect)>offsetHeight){
             offsetHeight=CGRectGetHeight(rect);
         }
         
         self.messageToolView.frame = CGRectMake(0.0f,UEX_SCREENHEIGHT-offsetHeight-CGRectGetHeight(inputViewRect),UEX_SCREENWIDTH,CGRectGetHeight(inputViewRect));
-        
-        CGRect tempRect = [self.uexObj.webViewEngine webScrollView].frame;
-        tempRect.size.height = CGRectGetMinY(self.messageToolView.frame)+self.bottomOffset+CGRectGetHeight(inputViewRect);
-        
-        [self.uexObj.webViewEngine webScrollView].frame = tempRect;
-
-
         switch (state) {
             case ZBMessageViewStateShowFace:
             {
@@ -248,31 +258,17 @@
         
     } completion:^(BOOL finished) {
         
-    }];
-    
-    NSInteger status = 0;
-    
-    if (CGRectGetHeight(rect) > 0) {
-        status = 1;
-    } else {
+        NSInteger status = 0;
         
-        CGRect tmpRect = [self.uexObj.webViewEngine webScrollView].frame;
-        tmpRect.size.height = [self.uexObj.webViewEngine webView].frame.size.height;
-        [self.uexObj.webViewEngine webScrollView].frame = tmpRect;
-
-        if ([self.uexObj.webViewEngine webScrollView].frame.size.height >= [self.uexObj.webViewEngine webScrollView].contentOffset.y) {
-            [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, 0)];
-        } else {
-
-
-            [[self.uexObj.webViewEngine webScrollView] setContentOffset:CGPointMake(0, [self.uexObj.webViewEngine webScrollView].contentOffset.y + [self.uexObj.webViewEngine webView].frame.origin.y)];
+        if (!_keyboardShouldHide) {
+            status = 1;
         }
         
-    }
+        NSDictionary * jsDic = @{@"status":@(status)};
+        [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onKeyBoardShow" arguments:ACArgsPack(jsDic.ac_JSONFragment)];
+    }];
     
-    
-    NSDictionary * jsDic = @{@"status":@(status)};
-    [self.uexObj.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.onKeyBoardShow" arguments:ACArgsPack(jsDic.ac_JSONFragment)];
+
 
 }
 
@@ -283,8 +279,8 @@
 #pragma mark - ZBMessageInputView Delegate
 - (void)didSelectedMultipleMediaAction:(BOOL)changed{
     
-    if (changed)
-    {
+    if (changed){
+        _keyboardShouldHide = NO;
         [self messageViewAnimationWithMessageRect:self.shareMenuView.frame
                          withMessageInputViewRect:self.messageToolView.frame
                                       andDuration:self.animationDuration
@@ -301,6 +297,7 @@
 
 - (void)didSendFaceAction:(BOOL)sendFace{
     if (sendFace) {
+        _keyboardShouldHide = NO;
         [self messageViewAnimationWithMessageRect:self.faceView.frame
                          withMessageInputViewRect:self.messageToolView.frame
                                       andDuration:self.animationDuration
@@ -338,6 +335,7 @@
 
 - (void)inputTextViewDidBeginEditing:(InputZBMessageTextView *)messageInputTextView
 {
+    _keyboardShouldHide = NO;
     [self messageViewAnimationWithMessageRect:self.keyboardRect
                      withMessageInputViewRect:self.messageToolView.frame
                                   andDuration:self.animationDuration
@@ -416,6 +414,7 @@
     
     [messageInputTextView resignFirstResponder];
     [messageInputTextView setText:nil];
+    
     [self inputTextViewDidChange:messageInputTextView];
     
 }
@@ -475,8 +474,7 @@
 #pragma end
 
 - (void)keyboardWillHide:(NSNotification *)notification {
-    
-    
+    _keyboardShouldHide = YES;
     [self messageViewAnimationWithMessageRect:CGRectZero
                      withMessageInputViewRect:self.messageToolView.frame
                                   andDuration:0.25
@@ -485,6 +483,7 @@
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification{
+
     self.keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     self.animationDuration= [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
 }
@@ -557,10 +556,10 @@
 }
 
 - (void)hideKeyboard {
-    
+    _keyboardShouldHide = YES;
     [self.messageToolView.messageInputTextView resignFirstResponder];
     
-    if (CGRectGetMaxY(self.messageToolView.frame) < UEX_SCREENHEIGHT) {
+    if (CGRectGetMaxY(self.messageToolView.frame) < UEX_SCREENHEIGHT - _bottomOffset) {
         
         [self messageViewAnimationWithMessageRect:CGRectZero
                          withMessageInputViewRect:self.messageToolView.frame
