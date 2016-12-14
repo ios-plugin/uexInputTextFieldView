@@ -16,8 +16,6 @@
 
 - (NSUInteger)numberOfLines {
     
-    NSUInteger x = [[self componentsSeparatedByString:@"\n"] count];
-    
     return [[self componentsSeparatedByString:@"\n"] count] + 1;
 }
 

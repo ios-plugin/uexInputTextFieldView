@@ -15,7 +15,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "EUtility.h"
-#define UEX_BUNDLE [EUtility bundleForPlugin:@"uexInputTextFieldView"]
+#import <AppCanKit/AppCanKit.h>
+#define UEX_BUNDLE [NSBundle ac_bundleForPlugin:@"uexInputTextFieldView"]
+#define UEX_SCREEN_WIDTH ([UIScreen mainScreen].applicationFrame.size.width)
 #endif
 #endif /* PrefixHeader_pch */

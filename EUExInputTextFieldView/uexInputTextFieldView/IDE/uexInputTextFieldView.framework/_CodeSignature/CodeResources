@@ -6,139 +6,251 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		JnOk+DwHI41QOhTMiDbcJAQ+dGU=
+		n4niS/to4tE0NuMEI/riXE/ijBc=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		JKbXoT98W7zj86Z2W3qbeHZe/kE=
+		VccYRc8+LJpEK2ajGtgIir/pOpk=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnBlue@2x.png</key>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnBlue@2x.png</key>
 		<data>
-		j4nEiMlNQnyy3ak7pixGh0kSHcA=
+		DQn1FYVXfNgVS/Kai5m0HYUuVBY=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnBlueHL@2x.png</key>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnBlueHL@2x.png</key>
 		<data>
-		4+v4T7rZB0rcA/SB9gjeQ/3RIe0=
+		zmT68+NQHMN9NyCqoRysA7E9m+8=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnGrey@2x.png</key>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnGrey@2x.png</key>
 		<data>
-		vbH4DZx+uLt8GUK7O5u6e3fIEUY=
+		4/2dyiyX7k/8snxzodWHoUsPj0A=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewEmotion_ios7@2x.png</key>
+		<key>uexInputTextFieldView.bundle/ToolViewEmotion_ios7@2x.png</key>
 		<data>
-		O4NgIDxW7wI/pTiY4EyGAevuvdA=
+		PkqglYWfIbI9bXsetI5XAxqWFkE=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewInputVoice_ios7@2x.png</key>
+		<key>uexInputTextFieldView.bundle/ToolViewInputVoice_ios7@2x.png</key>
 		<data>
-		kCuD67XQ2fUD10dODXBsm9SMSM8=
+		dcSVIsuyGovGBOaHmaix0wD7SXg=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewKeyboard_ios7@2x.png</key>
+		<key>uexInputTextFieldView.bundle/ToolViewKeyboard_ios7@2x.png</key>
 		<data>
-		F43w+BXXU+ZF6MZR3ZYtOemfwJ0=
+		FQLGCvP9vvkzRfB16qIW9h/EhEE=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/TypeSelectorBtn_Black_ios7@2x.png</key>
+		<key>uexInputTextFieldView.bundle/TypeSelectorBtn_Black_ios7@2x.png</key>
 		<data>
-		JW9BWGHjbAyDLXKwrWwLdv5dGwk=
+		9yNcIi3zWXmsRmh0g4tFkoFXOFU=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Receiving_Cavern@2x.png</key>
+		<key>uexInputTextFieldView.bundle/chatBubble_Receiving_Cavern@2x.png</key>
 		<data>
-		nIDYqhypLzaNVQwF94q5W6c6bWM=
+		HymyT9DI5q25RZenIozrMMHaq8E=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Receiving_Solid@2x.png</key>
+		<key>uexInputTextFieldView.bundle/chatBubble_Receiving_Solid@2x.png</key>
 		<data>
 		eWpMvkq8zeVnaffMmZCoMl6/qIw=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Sending_Cavern@2x.png</key>
+		<key>uexInputTextFieldView.bundle/chatBubble_Sending_Cavern@2x.png</key>
 		<data>
-		EtvPesE2lD0pBSivwmb0SZQrHKI=
+		Q99brSmfXQB4bZE5yjAikUX5C68=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Sending_Solid@2x.png</key>
+		<key>uexInputTextFieldView.bundle/chatBubble_Sending_Solid@2x.png</key>
 		<data>
 		jQqPdyPpSJ4sEROrpLkX0K110JU=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-background.png</key>
+		<key>uexInputTextFieldView.bundle/input-bar-background.png</key>
 		<data>
-		Gb0B4/pDOniAPs9yTfmn3vYt7hQ=
+		yMS0D7sCQDmVwD4oRSxQtYLLA+M=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-background@2x.png</key>
+		<key>uexInputTextFieldView.bundle/input-bar-background@2x.png</key>
 		<data>
-		sNp2G8KImR9Mp+j0swe5pFpt0aU=
+		V0Zl8xYWKAR7UyiVq1ElVhKA+SI=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-flat.png</key>
+		<key>uexInputTextFieldView.bundle/input-bar-flat.png</key>
 		<data>
-		Iyfw5PlmDbcvb7eX2gJjsAOagWA=
+		Fzp8dUfelM+sbF+TGdSWfqK+C4I=
 		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-flat@2x.png</key>
+		<key>uexInputTextFieldView.bundle/input-bar-flat@2x.png</key>
 		<data>
-		T7z5EGxat6DCu3DcEqQAW2nj5xw=
+		EPa4WsRKDRfzn2FxmIso652oR/s=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>embedded.mobileprovision</key>
-		<data>
-		JKbXoT98W7zj86Z2W3qbeHZe/kE=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnBlue@2x.png</key>
-		<data>
-		j4nEiMlNQnyy3ak7pixGh0kSHcA=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnBlueHL@2x.png</key>
-		<data>
-		4+v4T7rZB0rcA/SB9gjeQ/3RIe0=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/EmotionsSendBtnGrey@2x.png</key>
-		<data>
-		vbH4DZx+uLt8GUK7O5u6e3fIEUY=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewEmotion_ios7@2x.png</key>
-		<data>
-		O4NgIDxW7wI/pTiY4EyGAevuvdA=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewInputVoice_ios7@2x.png</key>
-		<data>
-		kCuD67XQ2fUD10dODXBsm9SMSM8=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/ToolViewKeyboard_ios7@2x.png</key>
-		<data>
-		F43w+BXXU+ZF6MZR3ZYtOemfwJ0=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/TypeSelectorBtn_Black_ios7@2x.png</key>
-		<data>
-		JW9BWGHjbAyDLXKwrWwLdv5dGwk=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Receiving_Cavern@2x.png</key>
-		<data>
-		nIDYqhypLzaNVQwF94q5W6c6bWM=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Receiving_Solid@2x.png</key>
-		<data>
-		eWpMvkq8zeVnaffMmZCoMl6/qIw=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Sending_Cavern@2x.png</key>
-		<data>
-		EtvPesE2lD0pBSivwmb0SZQrHKI=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/chatBubble_Sending_Solid@2x.png</key>
-		<data>
-		jQqPdyPpSJ4sEROrpLkX0K110JU=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-background.png</key>
-		<data>
-		Gb0B4/pDOniAPs9yTfmn3vYt7hQ=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-background@2x.png</key>
-		<data>
-		sNp2G8KImR9Mp+j0swe5pFpt0aU=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-flat.png</key>
-		<data>
-		Iyfw5PlmDbcvb7eX2gJjsAOagWA=
-		</data>
-		<key>uexInputTextFieldView.bundle/Contents/Resources/input-bar-flat@2x.png</key>
-		<data>
-		T7z5EGxat6DCu3DcEqQAW2nj5xw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			VccYRc8+LJpEK2ajGtgIir/pOpk=
+			</data>
+			<key>hash2</key>
+			<data>
+			ejCBtnGtWqhlrYI4GRjoMJxaexgdSnhjWGPR+Vc9frw=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnBlue@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DQn1FYVXfNgVS/Kai5m0HYUuVBY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Z+iZg9ae5EEypUfLMcxJehSOMOUukD/q4S0kngQxwLE=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnBlueHL@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zmT68+NQHMN9NyCqoRysA7E9m+8=
+			</data>
+			<key>hash2</key>
+			<data>
+			V5T8qdqggD/LKAVECzBAiNszkuW8/LS996WaCwDw/jE=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/EmotionsSendBtnGrey@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4/2dyiyX7k/8snxzodWHoUsPj0A=
+			</data>
+			<key>hash2</key>
+			<data>
+			V6I8XNqQxfUJXteA+WpT3oDZUrXVB7Z0YDXoWOpNrkQ=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/ToolViewEmotion_ios7@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PkqglYWfIbI9bXsetI5XAxqWFkE=
+			</data>
+			<key>hash2</key>
+			<data>
+			K898nLwMeUmR04liEX+mKat4MQUGa5+UatBssAghFEQ=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/ToolViewInputVoice_ios7@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dcSVIsuyGovGBOaHmaix0wD7SXg=
+			</data>
+			<key>hash2</key>
+			<data>
+			jedLVWbQcK1MI/a8wU2y6JnDES/FTHeqQBtpoXrWHvE=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/ToolViewKeyboard_ios7@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FQLGCvP9vvkzRfB16qIW9h/EhEE=
+			</data>
+			<key>hash2</key>
+			<data>
+			BHsv3y7oEQ+s5l+Bxs7Q3YrFrbxYZ19t9TMnCNrMs2k=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/TypeSelectorBtn_Black_ios7@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9yNcIi3zWXmsRmh0g4tFkoFXOFU=
+			</data>
+			<key>hash2</key>
+			<data>
+			gRFbwE69jikNrvMdKpTZlt/NQDRBWgadFckgWOu7hv4=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/chatBubble_Receiving_Cavern@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HymyT9DI5q25RZenIozrMMHaq8E=
+			</data>
+			<key>hash2</key>
+			<data>
+			r0ioyilGvlHRf0GwU+3+Y5hUE69FFvZ7tQiQI3hEfRs=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/chatBubble_Receiving_Solid@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eWpMvkq8zeVnaffMmZCoMl6/qIw=
+			</data>
+			<key>hash2</key>
+			<data>
+			NSMjcPvNw3TKDTjJ/tQW1HXKL83isZFz5F3nVR6BlV4=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/chatBubble_Sending_Cavern@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Q99brSmfXQB4bZE5yjAikUX5C68=
+			</data>
+			<key>hash2</key>
+			<data>
+			h7JswtwT/SpIgV8qEwU76cgGQJxhkjSOSFgbTYwo1bI=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/chatBubble_Sending_Solid@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jQqPdyPpSJ4sEROrpLkX0K110JU=
+			</data>
+			<key>hash2</key>
+			<data>
+			1VAQ9NT1cTQZsV1xXEgbeTTQJXTxfXfrsuyAbS0oZAQ=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/input-bar-background.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yMS0D7sCQDmVwD4oRSxQtYLLA+M=
+			</data>
+			<key>hash2</key>
+			<data>
+			FKD+qwjCPoj3AeZdLgxN6gydb+nuL+T611TUALw0uCc=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/input-bar-background@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V0Zl8xYWKAR7UyiVq1ElVhKA+SI=
+			</data>
+			<key>hash2</key>
+			<data>
+			tfZv/XTLTOmyJMN4WbAEk/ivNbwOLhLXKy6CO3iDYLw=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/input-bar-flat.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Fzp8dUfelM+sbF+TGdSWfqK+C4I=
+			</data>
+			<key>hash2</key>
+			<data>
+			Fa5pfjMjjghvzgBhAP6pt0OOMCV7v0hpLVt21m/nKdE=
+			</data>
+		</dict>
+		<key>uexInputTextFieldView.bundle/input-bar-flat@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EPa4WsRKDRfzn2FxmIso652oR/s=
+			</data>
+			<key>hash2</key>
+			<data>
+			Piz65ohrKYuWYj0VxZ2Mj5NO74b/yNi4y3EcCpMbuns=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

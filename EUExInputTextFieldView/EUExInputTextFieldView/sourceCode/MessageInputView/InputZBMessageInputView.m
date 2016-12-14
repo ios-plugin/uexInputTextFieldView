@@ -8,7 +8,7 @@
 
 #import "InputZBMessageInputView.h"
 #import "NSString+InputMessage.h"
-#import "EUtility.h"
+
 #import "InputChatKeyboardData.h"
 
 @interface InputZBMessageInputView()<UITextViewDelegate>
@@ -76,10 +76,10 @@
             self.voiceChangeButton.selected = NO;
             sender.selected = !sender.selected;
             if (sender.selected) {
-
+                
                 [self.messageInputTextView resignFirstResponder];
             }else{
-
+                
                 [self.messageInputTextView becomeFirstResponder];
             }
             
@@ -93,6 +93,7 @@
             if ([self.delegate respondsToSelector:@selector(didSendFaceAction:)]) {
                 [self.delegate didSendFaceAction:sender.selected];
             }
+            
         }
             break;
         case 2:

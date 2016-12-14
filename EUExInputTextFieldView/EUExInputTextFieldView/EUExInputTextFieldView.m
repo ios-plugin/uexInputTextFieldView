@@ -21,9 +21,13 @@
 
 @implementation EUExInputTextFieldView
 
--(id)initWithBrwView:(EBrowserView *)eInBrwView {
-    if (self = [super initWithBrwView:eInBrwView]) {
-        //
+
+
+
+- (instancetype)initWithWebViewEngine:(id<AppCanWebViewEngineObject>)engine{
+    self = [super initWithWebViewEngine:engine];
+    if (self) {
+        
     }
     return self;
 }
@@ -40,9 +44,11 @@
     }
 }
 
--(void)open:(NSMutableArray *)array {
+-(void)open:(NSMutableArray *)inArguments {
     InputChatKeyboardData *chatKeyboardData = [InputChatKeyboardData sharedChatKeyboardData];
-    NSDictionary * xmlDic = [[array objectAtIndex:0] JSONValue];
+    
+    ACArgsUnpack(NSDictionary *xmlDic) = inArguments;
+    
     NSString * xmlPath = [self absPath:[xmlDic objectForKey:@"emojicons"]];
     
     NSString * placeHold = @"";
@@ -66,15 +72,15 @@
     if([xmlDic objectForKey:@"inputMode"]&&[[xmlDic objectForKey:@"inputMode"] integerValue]==1){
         isAudio=YES;
     }
-    UIColor * sendBtnbgColorUp = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.5];
+    UIColor * sendBtnbgColorUp = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
     if ([xmlDic objectForKey:@"sendBtnbgColorUp"]) {
         NSString * sendBtnbgColorUpStr = [xmlDic objectForKey:@"sendBtnbgColorUp"];
-        sendBtnbgColorUp = [EUtility ColorFromString:sendBtnbgColorUpStr];
+        sendBtnbgColorUp = [UIColor ac_ColorWithHTMLColorString:sendBtnbgColorUpStr];
     }
-    UIColor * sendBtnbgColorDown = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    UIColor * sendBtnbgColorDown = [UIColor colorWithRed:1 green:1 blue:1 alpha:1.0];
     if ([xmlDic objectForKey:@"sendBtnbgColorDown"]) {
         NSString * sendBtnbgColorDownStr = [xmlDic objectForKey:@"sendBtnbgColorDown"];
-        sendBtnbgColorDown = [EUtility ColorFromString:sendBtnbgColorDownStr];
+        sendBtnbgColorDown = [UIColor ac_ColorWithHTMLColorString:sendBtnbgColorDownStr];
     }
     NSString * sendBtnText = @"发送";
     if ([xmlDic objectForKey:@"sendBtnText"]) {
@@ -84,10 +90,10 @@
     if ([xmlDic objectForKey:@"sendBtnTextSize"]) {
         sendBtnTextSize = [[xmlDic objectForKey:@"sendBtnTextSize"] floatValue];
     }
-    UIColor * sendBtnTextColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0];
+    UIColor * sendBtnTextColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
     if ([xmlDic objectForKey:@"sendBtnTextColor"]) {
         NSString * sendBtnTextColorStr = [xmlDic objectForKey:@"sendBtnTextColor"];
-        sendBtnTextColor = [EUtility ColorFromString:sendBtnTextColorStr];
+        sendBtnTextColor = [UIColor ac_ColorWithHTMLColorString:sendBtnTextColorStr];
     }
 
     chatKeyboardData.sendBtnbgColorUp = sendBtnbgColorUp;
@@ -99,13 +105,11 @@
     if (!_chatKeyboard) {
         _chatKeyboard = [[InputChatKeyboard alloc]initWithUexobj:self];
         if([xmlDic objectForKey:@"bottom"]){
-            _chatKeyboard.bottomOffset=[[xmlDic objectForKey:@"bottom"] floatValue];
+            _chatKeyboard.bottomOffset = [[xmlDic objectForKey:@"bottom"] floatValue];
         }
         [_chatKeyboard open];
         _tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
-        
-        [self.meBrwView addGestureRecognizer:_tapGR];
-        
+        [[self.webViewEngine webView]addGestureRecognizer:_tapGR];
         _tapGR.delegate = self;
     
     }
@@ -125,18 +129,14 @@
     return YES;
 }
 
-- (void)hideKeyboard:(NSMutableArray*)inArguments {
-    
-    if (_chatKeyboard) {
-        
+- (void)hideKeyboard:(UITapGestureRecognizer *)tapGR {
+    if (_chatKeyboard && [tapGR locationInView:[self.webViewEngine webView]].y < CGRectGetMinY(_chatKeyboard.messageToolView.frame)) {
         [_chatKeyboard hideKeyboard];
-        
     }
-    
 }
 
-- (void)changeWebViewFrame:(NSMutableArray *)array {
-    float h = [[array objectAtIndex:0] floatValue];
+- (void)changeWebViewFrame:(NSMutableArray *)inArguments {
+    float h = [inArguments.firstObject floatValue];
     if (_chatKeyboard) {
         [_chatKeyboard changeWebView:h];
     }
@@ -177,16 +177,25 @@
     [InputChatKeyboardData sharedChatKeyboardData].deleteImg = [emojiconsDic objectForKey:@"delete"];
 }
 
--(void)close:(NSMutableArray *)array {
+-(void)close:(NSMutableArray *)inArguments {
     if (_chatKeyboard) {
         [_chatKeyboard close];
         _chatKeyboard = nil;
     }
 }
 
--(void)setInputFocused:(NSMutableArray *)array {
-    
+-(void)setInputFocused:(NSMutableArray *)inArguments {
     [_chatKeyboard.messageToolView.messageInputTextView becomeFirstResponder];
 
 }
+
+- (NSNumber *)getInputBarHeight:(NSMutableArray *)inArguments{
+    CGFloat height = 40.f;
+    if(ACSystemVersion() >= 7.0){
+        height = 45.f;
+    }
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexInputTextFieldView.cbGetInputBarHeight" arguments:ACArgsPack(@(height))];
+    return @(height);
+}
+
 @end

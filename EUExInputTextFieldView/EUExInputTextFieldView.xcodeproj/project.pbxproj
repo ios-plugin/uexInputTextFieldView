@@ -41,16 +41,13 @@
 		42EE61401C2AB272007CFCB4 /* ToolViewInputVoice_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EE61311C2AB272007CFCB4 /* ToolViewInputVoice_ios7@2x.png */; };
 		42EE61411C2AB272007CFCB4 /* ToolViewKeyboard_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EE61321C2AB272007CFCB4 /* ToolViewKeyboard_ios7@2x.png */; };
 		42EE61421C2AB272007CFCB4 /* TypeSelectorBtn_Black_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EE61331C2AB272007CFCB4 /* TypeSelectorBtn_Black_ios7@2x.png */; };
+		42F20B011D1B91FA00DA6EEA /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F20B001D1B91FA00DA6EEA /* AppCanKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C7DD57D1AAD83E500FDE63B /* libuexInputTextFieldView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexInputTextFieldView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExInputTextFieldView.h; sourceTree = "<group>"; };
 		3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExInputTextFieldView.m; sourceTree = "<group>"; };
-		3C7DD5A11AAD842000FDE63B /* EBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBrowserView.h; sourceTree = "<group>"; };
-		3C7DD5A21AAD842000FDE63B /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
-		3C7DD5A31AAD842000FDE63B /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
-		3C7DD5A41AAD842000FDE63B /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		3C7DD5A81AAD853C00FDE63B /* InputChatKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboard.h; sourceTree = "<group>"; };
 		3C7DD5A91AAD853C00FDE63B /* InputChatKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputChatKeyboard.m; sourceTree = "<group>"; };
 		3C7DD5AA1AAD853C00FDE63B /* InputChatKeyboardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputChatKeyboardData.h; sourceTree = "<group>"; };
@@ -69,13 +66,6 @@
 		3C7DD5B91AAD853C00FDE63B /* InputZBMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageBubbleFactory.m; sourceTree = "<group>"; };
 		3C7DD5BA1AAD853C00FDE63B /* InputZBMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBMessageVoiceFactory.h; sourceTree = "<group>"; };
 		3C7DD5BB1AAD853C00FDE63B /* InputZBMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBMessageVoiceFactory.m; sourceTree = "<group>"; };
-		3C7DD5BD1AAD853C00FDE63B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		3C7DD5BE1AAD853C00FDE63B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		3C7DD5BF1AAD853C00FDE63B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		3C7DD5C01AAD853C00FDE63B /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		3C7DD5C11AAD853C00FDE63B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		3C7DD5C21AAD853C00FDE63B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		3C7DD5C31AAD853C00FDE63B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		3C7DD5C51AAD853C00FDE63B /* InputZBExpressionSectionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBExpressionSectionBar.h; sourceTree = "<group>"; };
 		3C7DD5C61AAD853C00FDE63B /* InputZBExpressionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputZBExpressionSectionBar.m; sourceTree = "<group>"; };
 		3C7DD5C71AAD853C00FDE63B /* InputZBFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputZBFaceView.h; sourceTree = "<group>"; };
@@ -111,6 +101,7 @@
 		42EE61311C2AB272007CFCB4 /* ToolViewInputVoice_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewInputVoice_ios7@2x.png"; sourceTree = "<group>"; };
 		42EE61321C2AB272007CFCB4 /* ToolViewKeyboard_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewKeyboard_ios7@2x.png"; sourceTree = "<group>"; };
 		42EE61331C2AB272007CFCB4 /* TypeSelectorBtn_Black_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TypeSelectorBtn_Black_ios7@2x.png"; sourceTree = "<group>"; };
+		42F20B001D1B91FA00DA6EEA /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F20B011D1B91FA00DA6EEA /* AppCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,24 +144,13 @@
 		3C7DD57F1AAD83E500FDE63B /* EUExInputTextFieldView */ = {
 			isa = PBXGroup;
 			children = (
-				3C7DD5A01AAD842000FDE63B /* engineHeader */,
+				42F20B001D1B91FA00DA6EEA /* AppCanKit.framework */,
 				3C7DD5801AAD83E500FDE63B /* EUExInputTextFieldView.h */,
 				3C7DD5821AAD83E500FDE63B /* EUExInputTextFieldView.m */,
 				3C7DD5A51AAD853C00FDE63B /* sourceCode */,
 				42EE61181C2AB0EB007CFCB4 /* PrefixHeader.pch */,
 			);
 			path = EUExInputTextFieldView;
-			sourceTree = "<group>";
-		};
-		3C7DD5A01AAD842000FDE63B /* engineHeader */ = {
-			isa = PBXGroup;
-			children = (
-				3C7DD5A11AAD842000FDE63B /* EBrowserView.h */,
-				3C7DD5A21AAD842000FDE63B /* EUExBase.h */,
-				3C7DD5A31AAD842000FDE63B /* EUExBaseDefine.h */,
-				3C7DD5A41AAD842000FDE63B /* EUtility.h */,
-			);
-			path = engineHeader;
 			sourceTree = "<group>";
 		};
 		3C7DD5A51AAD853C00FDE63B /* sourceCode */ = {
@@ -183,7 +164,6 @@
 				3C7DD5AD1AAD853C00FDE63B /* InputChatKeyboardUtility.m */,
 				3C7DD5AE1AAD853C00FDE63B /* Extend */,
 				3C7DD5B51AAD853C00FDE63B /* Factory */,
-				3C7DD5BC1AAD853C00FDE63B /* json */,
 				3C7DD5C41AAD853C00FDE63B /* messageFaceView */,
 				3C7DD5CB1AAD853C00FDE63B /* MessageInputView */,
 				3C7DD5D01AAD853C00FDE63B /* messageShareView */,
@@ -217,20 +197,6 @@
 				3C7DD5BB1AAD853C00FDE63B /* InputZBMessageVoiceFactory.m */,
 			);
 			path = Factory;
-			sourceTree = "<group>";
-		};
-		3C7DD5BC1AAD853C00FDE63B /* json */ = {
-			isa = PBXGroup;
-			children = (
-				3C7DD5BD1AAD853C00FDE63B /* JSON.h */,
-				3C7DD5BE1AAD853C00FDE63B /* NSObject+SBJSON.h */,
-				3C7DD5BF1AAD853C00FDE63B /* NSString+SBJSON.h */,
-				3C7DD5C01AAD853C00FDE63B /* SBJSON.h */,
-				3C7DD5C11AAD853C00FDE63B /* SBJsonBase.h */,
-				3C7DD5C21AAD853C00FDE63B /* SBJsonParser.h */,
-				3C7DD5C31AAD853C00FDE63B /* SBJsonWriter.h */,
-			);
-			path = json;
 			sourceTree = "<group>";
 		};
 		3C7DD5C41AAD853C00FDE63B /* messageFaceView */ = {
@@ -366,7 +332,7 @@
 		3C7DD5751AAD83E500FDE63B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = com.zywx;
 				TargetAttributes = {
 					3C7DD57C1AAD83E500FDE63B = {
@@ -537,6 +503,10 @@
 		3C7DD5921AAD83E600FDE63B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExInputTextFieldView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/EUExInputTextFieldView/PrefixHeader.pch;
 				OTHER_LDFLAGS = "-ObjC";
@@ -548,6 +518,10 @@
 		3C7DD5931AAD83E600FDE63B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExInputTextFieldView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/EUExInputTextFieldView/PrefixHeader.pch;
 				OTHER_LDFLAGS = "-ObjC";

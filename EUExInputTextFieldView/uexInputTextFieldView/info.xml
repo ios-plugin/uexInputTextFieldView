@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uexplugins>
-  <plugin uexName="uexInputTextFieldView" version="3.0.9" build="9">
-    <info>9: IDE证书更新</info>
-    <build>8: 修改发送按钮自定义</build>
-    <build>7: 修复键盘弹出收回时显示头像图标页</build>
-    <build>6: 添加IDE支持</build>
-    <build>5: 修改键盘弹出时页面弹动，修改键盘收回时遮挡评论</build>
-    <build>4: 点击空白处收回键盘，添加setInputFocused接口，添加changeWebViewFrame接口，修改输入单引号收不到信息</build>
-    <build>3: open接口参数改为json类型，添加placehold参数，可以设置输入框里默认显示的文字</build>
-    <build>2: 动画优化</build>
-    <build>1: onCommit接口的参数使用json格式</build>
-    <build>0: EUExInputTextFieldView插件</build>
-  </plugin>
+    <plugin uexName="uexInputTextFieldView" version="4.0.0" build="0">
+        <info>:uexInputTextFieldView for iOS</info>
+    </plugin>
 </uexplugins>
+
